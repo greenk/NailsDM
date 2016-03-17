@@ -24,16 +24,15 @@ CREATE TABLE employee_tb (
 ) ENGINE=InnoDB;
 
 CREATE TABLE employee_skill_tb (
-	employee_id						INT,
-	e_skill							VARCHAR(128),
+	employee_id						INT						NOT NULL,
+	e_skill							VARCHAR(128)			NOT NULL,
 	
 	PRIMARY KEY (employee_id, e_skill),
-	FOREIGN KEY employee_skill_fk (employee_id) REFERENCES employee_tb (e_id)
-	ON DELETE SET NULL
+	FOREIGN KEY employee_skill_fk (employee_id) REFERENCES employee_tb (e_id)	
 ) ENGINE=InnoDB;
 
 CREATE TABLE customer_tb (
-	c_id							BIGINT					NOT NULL					UNSIGNED 				AUTO_INCREMENT,
+	c_id							BIGINT					UNSIGNED					NOT NULL		AUTO_INCREMENT,
 	c_phone							VARCHAR(50)				,
 	c_email							VARCHAR(128)			,
 	
@@ -42,7 +41,7 @@ CREATE TABLE customer_tb (
 ) ENGINE=InnoDB;
 
 CREATE TABLE work_tb (
-	work_id							BIGINT					NOT NULL					UNSIGNED 		AUTO_INCREMENT,
+	work_id							BIGINT					UNSIGNED					NOT NULL 		AUTO_INCREMENT,
 	created_date					DATETIME				NOT NULL,
 	started_date					DATETIME				NOT NULL,
 	finish_date						DATETIME				NOT NULL,
