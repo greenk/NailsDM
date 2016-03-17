@@ -62,3 +62,12 @@ CREATE TABLE work_tb (
 	ON DELETE SET NULL
 		
 ) ENGINE=InnoDB;
+
+CREATE TABLE work_name_tb (
+	work_id					BIGINT						UNSIGNED			NOT NULL,
+	work_name				VARCHAR(255)				NOT NULL,
+	gel_option				VARCHAR(64),					
+	
+	PRIMARY KEY (work_name, work_id),
+	FOREIGN KEY work_name_tb_work_tb_fk (work_id) REFERENCES work_tb (work_id)
+) ENGINE=InnoDB;
