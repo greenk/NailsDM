@@ -1,6 +1,6 @@
 
-INSERT INTO employee_tb ( e_phone, e_email, e_first_name, e_last_name, e_street, e_city, e_state, e_zip, e_password, e_at_work, e_working, e_avatar_url)
-		VALUES ( '615-556-4210', 'binhsuse@gmail.com', 'binh', 'bui', '2008 Harvest Lane', 'Nashville', 'TN', '37218', '123456', '1', '0', 'http://kenhtiengviet.com/myavatar.png');
+INSERT INTO employee_tb ( e_phone, e_email, e_first_name, e_last_name, e_street, e_city, e_state, e_zip, e_password, e_at_work, e_working, e_avatar_url, e_check_in, e_check_out)
+		VALUES ( '615-556-4210', 'binhsuse@gmail.com', 'binh', 'bui', '2008 Harvest Lane', 'Nashville', 'TN', '37218', '123456', '1', '0', 'http://kenhtiengviet.com/myavatar.png' );
 		
 INSERT INTO employee_tb ( e_phone, e_email, e_first_name, e_last_name, e_street, e_city, e_state, e_zip, e_password, e_at_work, e_working, e_avatar_url)
 		VALUES ( '115-516-4210', 'binbbhsuse@gmail.com', 'bifnh', 'bubi', '20028 Harvest Lane', 'Nashville', 'TN', '37218', '123456', '1', '0', 'http://kenhtiengviet.com/myavatar2.png');
@@ -8,20 +8,32 @@ INSERT INTO employee_tb ( e_phone, e_email, e_first_name, e_last_name, e_street,
 INSERT INTO employee_tb ( e_phone, e_email, e_first_name, e_last_name, e_street, e_city, e_state, e_zip, e_password, e_at_work, e_working, e_avatar_url)
 		VALUES ( '615-932-2892', 'lequynh@yahoo.com', 'quynh', 'le', '6800 Charlotte Pike', 'Nashville', 'TN', '37209', 'password1', '1', '0', 'http://kenhtiengviet.com/myavatar3.png');
 		
+INSERT INTO employee_tb ( e_phone, e_email, e_first_name, e_last_name, e_street, e_city, e_state, e_zip, e_password, e_at_work, e_working, e_avatar_url)
+		VALUES ( '615-912-2292', 'letruc@yahoo.com', 'truc', 'thanh', '7200 Charlotte Pike', 'Nashville', 'TN', '37219', 'password1', '1', '0', 'http://kenhtiengviet.com/myavatar3.png');
+		
+INSERT INTO employee_tb ( e_phone, e_email, e_first_name, e_last_name, e_street, e_city, e_state, e_zip, e_password, e_at_work, e_working, e_avatar_url)
+		VALUES ( '515-212-2592', 'nguyenbao@yahoo.com', 'bao', 'nguyen', '3005 Lebanon Pike', 'Nashville', 'TN', '37225', 'password1', '1', '0', 'http://kenhtiengviet.com/myavatar3.png');
+		
 INSERT INTO employee_gotowork_tb ( employee_id, date_at_work, time_at_work, time_leave_work)
 		VALUES (1, '20160312', '20160312 08:00:00', '20160312 19:00:00');
 INSERT INTO employee_gotowork_tb ( employee_id, date_at_work, time_at_work, time_leave_work)
-		VALUES (1, '20160312', '20160314 10:00:00', '20160312 19:00:00');
+		VALUES (1, '20160311', '20160311 10:00:00', '20160311 19:00:00');
 INSERT INTO employee_gotowork_tb ( employee_id, date_at_work, time_at_work, time_leave_work)
-		VALUES (1, '20160313', '20160312 09:00:00', '20160312 19:00:00');
+		VALUES (1, '20160313', '20160312 09:00:00', '20160313 19:00:00');
 INSERT INTO employee_gotowork_tb ( employee_id, date_at_work, time_at_work, time_leave_work)
-		VALUES (1, '20160313', '20160312 08:00:00', '20160312 19:00:00');
+		VALUES (1, '20160310', '20160310 08:00:00', '20160310 19:00:00');
 INSERT INTO employee_gotowork_tb ( employee_id, date_at_work, time_at_work, time_leave_work)
 		VALUES (2, '20160312', '20160312 08:00:00', '20160312 19:00:00');
 INSERT INTO employee_gotowork_tb ( employee_id, date_at_work, time_at_work, time_leave_work)
-		VALUES (2, '20160312', '20160312 08:00:00', '20160312 19:00:00');		
+		VALUES (2, '20160313', '20160313 08:00:00', '20160313 19:00:00');		
 INSERT INTO employee_gotowork_tb ( employee_id, date_at_work, time_at_work, time_leave_work)
-		VALUES (2, '20160312', '20160312 10:00:00', '20160312 15:00:00');
+		VALUES (2, '20160314', '20160314 10:00:00', '20160314 15:00:00');
+INSERT INTO employee_gotowork_tb ( employee_id, date_at_work, time_at_work, time_leave_work)
+		VALUES (3, '20160314', '20160314 10:00:00', '20160314 15:00:00');
+INSERT INTO employee_gotowork_tb ( employee_id, date_at_work, time_at_work, time_leave_work)
+		VALUES (4, '20160314', '20160314 10:00:00', '20160314 15:00:00');
+INSERT INTO employee_gotowork_tb ( employee_id, date_at_work, time_at_work, time_leave_work)
+		VALUES (5, '20160314', '20160314 10:00:00', '20160314 15:00:00');
 		
 
 INSERT INTO employee_skill_tb ( employee_id, e_skill)
@@ -46,6 +58,24 @@ INSERT INTO employee_skill_tb ( employee_id, e_skill)
 		VALUES (3, 'GEL');
 INSERT INTO employee_skill_tb ( employee_id, e_skill)
 		VALUES (3, 'Eyebrown');
+		
+INSERT INTO employee_skill_tb ( employee_id, e_skill)
+		VALUES (4, 'Manicure');
+INSERT INTO employee_skill_tb ( employee_id, e_skill)
+		VALUES (4, 'Pedicure');
+INSERT INTO employee_skill_tb ( employee_id, e_skill)
+		VALUES (4, 'GEL');
+INSERT INTO employee_skill_tb ( employee_id, e_skill)
+		VALUES (4, 'Design');
+
+INSERT INTO employee_skill_tb ( employee_id, e_skill)
+		VALUES (5, 'Manicure');
+INSERT INTO employee_skill_tb ( employee_id, e_skill)
+		VALUES (5, 'Pedicure');
+INSERT INTO employee_skill_tb ( employee_id, e_skill)
+		VALUES (5, 'GEL');
+INSERT INTO employee_skill_tb ( employee_id, e_skill)
+		VALUES (5, 'Design');
 		
 
 INSERT INTO customer_tb ( c_phone, c_email, c_firstname, c_lastname )
