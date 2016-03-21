@@ -16,12 +16,26 @@ CREATE TABLE employee_tb (
 	e_password						VARCHAR(255)			NOT NULL,
 	e_at_work						BOOLEAN					NOT NULL,
 	e_working						BOOLEAN					NOT NULL,
+	e_check_in						DATETIME				,
+	e_check_out						DATETIME				,
 	
 	e_avatar_url					VARCHAR(2083)			,
 	
 	PRIMARY KEY (e_id)
 	
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET= utf8 DEFAULT COLLATE utf8_general_ci;
+
+CREATE TABLE employee_gotowork_tb (
+	date_at_work					DATE					NOT NULL,
+	time_at_work					DATETIME				NOT NULL,
+	time_leave_work					DATETIME				,
+	
+	employee_id						INT,
+	
+	
+	PRIMARY KEY ( employee_id, date_at_work ),
+	FOREIGN KEY employee_gotowork_fk (employee_id) REFERENCES employee_tb (e_id);
+) ENGINE=InnoDB DEFAULT CHARSET= utf8 DEFAULT COLLATE utf8_general_ci
 
 CREATE TABLE employee_skill_tb (
 	employee_id						INT						NOT NULL,
@@ -29,16 +43,18 @@ CREATE TABLE employee_skill_tb (
 	
 	PRIMARY KEY (employee_id, e_skill),
 	FOREIGN KEY employee_skill_fk (employee_id) REFERENCES employee_tb (e_id)	
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET= utf8 DEFAULT COLLATE utf8_general_ci;
 
 CREATE TABLE customer_tb (
 	c_id							BIGINT					UNSIGNED					NOT NULL		AUTO_INCREMENT,
 	c_phone							VARCHAR(50)				,
 	c_email							VARCHAR(128)			,
+	c_firstname						VARCHAR(255)			,
+	c_lastname						VARCHAR(255)			,
 	
 	PRIMARY KEY (c_id)
 	
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET= utf8 DEFAULT COLLATE utf8_general_ci;
 
 CREATE TABLE work_tb (
 	work_id							BIGINT					UNSIGNED					NOT NULL 		AUTO_INCREMENT,
@@ -61,7 +77,7 @@ CREATE TABLE work_tb (
 	FOREIGN KEY work_tb_customer_tb_fk (customer_id) REFERENCES customer_tb (c_id)
 	ON DELETE SET NULL
 		
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET= utf8 DEFAULT COLLATE utf8_general_ci;
 
 CREATE TABLE work_name_tb (
 	work_id					BIGINT						UNSIGNED			NOT NULL,
@@ -70,4 +86,4 @@ CREATE TABLE work_name_tb (
 	
 	PRIMARY KEY (work_name, work_id),
 	FOREIGN KEY work_name_tb_work_tb_fk (work_id) REFERENCES work_tb (work_id)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET= utf8 DEFAULT COLLATE utf8_general_ci;
