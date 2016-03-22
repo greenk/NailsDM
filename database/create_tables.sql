@@ -30,8 +30,7 @@ CREATE TABLE employee_gotowork_tb (
 	time_at_work					DATETIME				NOT NULL,
 	time_leave_work					DATETIME				,
 	
-	employee_id						INT,
-	
+	employee_id						INT,	
 	
 	PRIMARY KEY ( employee_id, date_at_work ),
 	FOREIGN KEY employee_gotowork_fk (employee_id) REFERENCES employee_tb (e_id);
@@ -56,6 +55,20 @@ CREATE TABLE customer_tb (
 	
 ) ENGINE=InnoDB DEFAULT CHARSET= utf8 DEFAULT COLLATE utf8_general_ci;
 
+CREATE TABLE work_type_tb (
+	work_type_id			INT				UNSIGNED	NOT NULL	AUTO_INCREMENT,
+	work_name				VARCHAR(255)				NOT NULL,
+	work_category			VARCHAR(128),
+	description				TEXT,
+	work_type_price			FLOAT(10,2),
+	
+	
+	work_id					BIGINT						UNSIGNED			NOT NULL,
+	
+	PRIMARY KEY (work_type_id),
+	/*FOREIGN KEY work_name_tb_work_tb_fk (work_id) REFERENCES work_tb (work_id)*/
+) ENGINE=InnoDB DEFAULT CHARSET= utf8 DEFAULT COLLATE utf8_general_ci;
+
 CREATE TABLE work_tb (
 	work_id							BIGINT					UNSIGNED					NOT NULL 		AUTO_INCREMENT,
 	created_date					DATETIME				NOT NULL,
@@ -70,20 +83,16 @@ CREATE TABLE work_tb (
 	
 	employee_id						INT						,
 	customer_id						BIGINT					UNSIGNED,
+	work_type_id					INT						UNSIGNED,
 	
 	PRIMARY KEY (work_id),
 	FOREIGN KEY work_tb_employee_tb_fk (employee_id) REFERENCES employee_tb (e_id)
 	ON DELETE SET NULL,
 	FOREIGN KEY work_tb_customer_tb_fk (customer_id) REFERENCES customer_tb (c_id)
 	ON DELETE SET NULL
+	FOREIGN KEY work_tb_work_type_tb_fk (work_type_id) REFERENCES work_type_tb (work_type_id)
+	ON DELETE SET NULL	
 		
 ) ENGINE=InnoDB DEFAULT CHARSET= utf8 DEFAULT COLLATE utf8_general_ci;
 
-CREATE TABLE work_name_tb (
-	work_id					BIGINT						UNSIGNED			NOT NULL,
-	work_name				VARCHAR(255)				NOT NULL,
-	gel_option				VARCHAR(64),					
-	
-	PRIMARY KEY (work_name, work_id),
-	FOREIGN KEY work_name_tb_work_tb_fk (work_id) REFERENCES work_tb (work_id)
-) ENGINE=InnoDB DEFAULT CHARSET= utf8 DEFAULT COLLATE utf8_general_ci;
+

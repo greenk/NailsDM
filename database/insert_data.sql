@@ -91,38 +91,85 @@ INSERT INTO customer_tb ( c_phone, c_email )
 INSERT INTO customer_tb ( c_phone, c_email )
 		VALUES ('457-885-7841', 'customer_email5@yesterday.com', 'Women', 'Name');
 		
-INSERT INTO work_tb ( created_date, started_date, finish_date, total, total_tip, cash_amount, card_amount, cash_tip_amount, card_tip_amount, employee_id, customer_id)
-		VALUES ('2016-03-10 12:02:40', '2016-03-10 14:03:40', '2016-03-10 15:20:54', 70.12, 5.00, 70.12, 0.00, 5.00, 0.00, 1, 1);
-INSERT INTO work_tb ( created_date, started_date, finish_date, total, total_tip, cash_amount, card_amount, cash_tip_amount, card_tip_amount, employee_id, customer_id)
-		VALUES ('2016-02-10 12:02:40', '2016-02-10 14:03:40', '2016-02-10 15:20:54', 50.00, 5.00, 50.00, 0.00, 5.00, 0.00, 1, 1);
-INSERT INTO work_tb ( created_date, started_date, finish_date, total, total_tip, cash_amount, card_amount, cash_tip_amount, card_tip_amount, employee_id, customer_id)
-		VALUES ('2016-02-10 12:02:40', '2016-02-10 14:03:40', '2016-02-10 15:20:54', 45.00, 5.00, 0.00, 45.00, 0.00, 5.00, 1, 1);
+INSERT INTO work_tb ( created_date, started_date, finish_date, total, total_tip, cash_amount, card_amount, cash_tip_amount, card_tip_amount, employee_id, customer_id, work_type_id)
+		VALUES ('2016-03-10 12:02:40', '2016-03-10 14:03:40', '2016-03-10 15:20:54', 15.00, 5.00, 15.00, 0.00, 5.00, 0.00, 1, 1, 1);
+INSERT INTO work_tb ( created_date, started_date, finish_date, total, total_tip, cash_amount, card_amount, cash_tip_amount, card_tip_amount, employee_id, customer_id, work_type_id)
+		VALUES ('2016-03-10 12:02:40', '2016-03-10 14:03:40', '2016-03-10 15:20:54', 25.00, 5.00, 25.00, 0.00, 5.00, 0.00, 1, 1, 15);
+INSERT INTO work_tb ( created_date, started_date, finish_date, total, total_tip, cash_amount, card_amount, cash_tip_amount, card_tip_amount, employee_id, customer_id, work_type_id)
+		VALUES ('2016-02-10 12:02:40', '2016-02-10 14:03:40', '2016-02-10 15:20:54', 50.00, 5.00, 50.00, 0.00, 5.00, 0.00, 1, 2, 10);		
+INSERT INTO work_tb ( created_date, started_date, finish_date, total, total_tip, cash_amount, card_amount, cash_tip_amount, card_tip_amount, employee_id, customer_id, work_type_id)
+		VALUES ('2016-02-10 12:02:40', '2016-02-10 14:03:40', '2016-02-10 15:20:54', 45.00, 5.00, 0.00, 45.00, 0.00, 5.00, 1, 2, 2);
+INSERT INTO work_tb ( created_date, started_date, finish_date, total, total_tip, cash_amount, card_amount, cash_tip_amount, card_tip_amount, employee_id, customer_id, work_type_id)
+		VALUES ('2016-02-10 12:02:40', '2016-02-10 15:30:40', '2016-02-10 17:25:54', 40.00, 5.00, 0.00, 40.00, 0.00, 5.00, 1, 3, 4);
+INSERT INTO work_tb ( created_date, started_date, finish_date, total, total_tip, cash_amount, card_amount, cash_tip_amount, card_tip_amount, employee_id, customer_id, work_type_id)
+		VALUES ('2016-02-11 12:02:40', '2016-02-11 14:03:40', '2016-02-11 15:20:54', 20.00, 5.00, 0.00, 20.00, 0.00, 5.00, 1, 2, 3);
 
-INSERT INTO work_tb ( created_date, started_date, finish_date, total, total_tip, cash_amount, card_amount, cash_tip_amount, card_tip_amount, employee_id, customer_id)
-		VALUES ('2016-03-10 12:02:40', '2016-03-10 14:03:40', '2016-03-10 15:20:54', 90.00, 5.00, 90.00, 0.00, 5.00, 0.00, 2, 1);		
-INSERT INTO work_tb ( created_date, started_date, finish_date, total, total_tip, cash_amount, card_amount, cash_tip_amount, card_tip_amount, employee_id, customer_id)
-		VALUES ('2016-03-10 12:02:40', '2016-03-10 14:03:40', '2016-03-10 15:20:54', 85.00, 0.00, 00.00, 85.00, 0.00, 5.00, 2, 1);
-INSERT INTO work_tb ( created_date, started_date, finish_date, total, total_tip, cash_amount, card_amount, cash_tip_amount, card_tip_amount, employee_id, customer_id)
-		VALUES ('2016-02-10 11:02:40', '2016-02-10 12:03:40', '2016-03-10 15:20:54', 25.00, 10.00, 00.00, 25.00, 0.00, 10.00, 2, 1);
+INSERT INTO work_tb ( created_date, started_date, finish_date, total, total_tip, cash_amount, card_amount, cash_tip_amount, card_tip_amount, employee_id, customer_id, work_type_id)
+		VALUES ('2016-03-10 12:02:40', '2016-03-10 14:03:40', '2016-03-10 15:20:54', 40.00, 5.00, 40.00, 0.00, 5.00, 0.00, 2, 1, 17);		
+INSERT INTO work_tb ( created_date, started_date, finish_date, total, total_tip, cash_amount, card_amount, cash_tip_amount, card_tip_amount, employee_id, customer_id, work_type_id)
+		VALUES ('2016-03-10 12:02:40', '2016-03-10 14:03:40', '2016-03-10 15:20:54', 25.00, 5.00, 00.00, 25.00, 0.00, 5.00, 2, 4, 5);
+INSERT INTO work_tb ( created_date, started_date, finish_date, total, total_tip, cash_amount, card_amount, cash_tip_amount, card_tip_amount, employee_id, customer_id, work_type_id)
+		VALUES ('2016-02-10 11:02:40', '2016-02-10 12:03:40', '2016-03-10 15:20:54', 7.00, 00.00, 00.00, 7.00, 0.00, 00.00, 2, 5, 6);
 		
 
-INSERT INTO work_name_tb ( work_id, work_name, gel_option)
-		VALUES (1, 'Pedicure', 'N');
-INSERT INTO work_name_tb ( work_id, work_name, gel_option)
-		VALUES (1, 'Manicure', 'Y');
-INSERT INTO work_name_tb ( work_id, work_name, gel_option)
-		VALUES (2, 'Pedicure', 'Y');
-INSERT INTO work_name_tb ( work_id, work_name, gel_option)
-		VALUES (2, 'Acrylic Fullset', 'N');
-INSERT INTO work_name_tb ( work_id, work_name, gel_option)
-		VALUES (3, 'Acrylic Fill in', 'Y');
-INSERT INTO work_name_tb ( work_id, work_name, gel_option)
-		VALUES (4, 'Acrylic Fill in', 'Y');
-INSERT INTO work_name_tb ( work_id, work_name, gel_option)
-		VALUES (5, 'Eye Brown, Acrylic Fullset', 'N');
-INSERT INTO work_name_tb ( work_id, work_name, gel_option)
-		VALUES (6, 'Acrylic Fill in, Pedicure', 'N');
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Hand', 'Spa Manicure', 'regular polish and manicure service', 15.00);
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Hand', 'SeaSalt Manicure', 'regular polish and manicure with sea salt', 20.00 );
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Hand', 'Deluxe Manicure', 'regular polish and manicure with sea salt, hot tower', 25.00);	
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Hand', 'Gel Manicure', 'regular manicure and gel polish', 40.00);
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Hand', 'Gel polish change', 'Gel polish changing', 25.00);
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Hand', 'Polish change', 'changing regular color', 7.00);
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Hand', 'Other service', 'asking nail technician for detail and price', 00.00);
+
 		
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Acrylic Hand', 'Full set', 'regular full set', 25.00);
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Acrylic Hand', 'Fill in', 'fill arcrylic ', 15.00);
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Acrylic Hand', 'Pink and White Full set', 'cover your nail with pink and white powder', 50.00);
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Acrylic Hand', 'Pink and White Fill in', 'fill pink and white', 35.00);		
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Acrylic Hand', 'White tip Full set', 'french tip finish with your acrylic nails', 30.00);
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Acrylic Hand', 'Gel Polish on top', 'polishing gel color on your acrylic nails', 25.00);
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Acrylic Hand', 'Other', 'asking nail technician for more detail and price', 00.00);
+
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Feet', 'Spa Pedicure', 'regular pedicure', 25.00);
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Feet', 'SeaSalt Pedicure', 'regular pedicure with seasalt', 30.00);
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Feet', 'Deluxe Pedicure', 'regular pedicure with seasalt, hot tower, massage', 40.00);
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Feet', 'Gel polish change', 'using gel color on your toes', 35.00);
+
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Acrylic Feet', 'Full set', 'cover your toes with powder', 35.00);
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Acrylic Feet', 'Fill in', 'fill in', 25.00);
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Acrylic Feet', 'Gel Polish on top', 'polishing gel color on your acrylic nails', 25.00);
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Acrylic Feet', 'Other', 'asking nail technician for more detail and price', 00.00);		
+
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Waxing', 'Eyebrowns', 'cleaning your eyebrowns', 10.00);
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Waxing', 'Chin', 'cleaning your chin', 12.00);		
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Waxing', 'Other', 'asking a cosmotologist for more detail and price', 00.00);		
+
+INSERT INTO work_name_tb ( work_category, work_name, description, work_type_price)
+		VALUES ('Other', 'Other service', 'asking nail technician for more detail and price', 00.00);				
 		
 	
 		
