@@ -28,13 +28,20 @@ CREATE TABLE employee_tb (
 CREATE TABLE employee_gotowork_tb (
 	date_at_work					DATE					NOT NULL,
 	time_at_work					DATETIME				NOT NULL,
-	time_leave_work					DATETIME				,
+	time_leave_work					DATETIME,
 	
-	employee_id						INT,	
+	employee_id						INT	,	
 	
-	PRIMARY KEY ( employee_id, date_at_work ),
-	FOREIGN KEY employee_gotowork_fk (employee_id) REFERENCES employee_tb (e_id);
-) ENGINE=InnoDB DEFAULT CHARSET= utf8 DEFAULT COLLATE utf8_general_ci
+	PRIMARY KEY (employee_id, date_at_work),
+	FOREIGN KEY employee_gotowork_fk (employee_id) REFERENCES employee_tb (e_id)
+) ENGINE=InnoDB DEFAULT CHARSET= utf8 DEFAULT COLLATE utf8_general_ci;
+
+/* Create Trigger 
+ * When insert or update row in employee_gotowork_tb
+ * Update e_check_out in employee_tb
+ *
+*/
+
 
 CREATE TABLE employee_skill_tb (
 	employee_id						INT						NOT NULL,
@@ -63,9 +70,9 @@ CREATE TABLE work_type_tb (
 	work_type_price			FLOAT(10,2),
 	
 	
-	work_id					BIGINT						UNSIGNED			NOT NULL,
+	/*work_id					BIGINT						UNSIGNED			NOT NULL,*/
 	
-	PRIMARY KEY (work_type_id),
+	PRIMARY KEY (work_type_id)
 	/*FOREIGN KEY work_name_tb_work_tb_fk (work_id) REFERENCES work_tb (work_id)*/
 ) ENGINE=InnoDB DEFAULT CHARSET= utf8 DEFAULT COLLATE utf8_general_ci;
 
@@ -89,7 +96,7 @@ CREATE TABLE work_tb (
 	FOREIGN KEY work_tb_employee_tb_fk (employee_id) REFERENCES employee_tb (e_id)
 	ON DELETE SET NULL,
 	FOREIGN KEY work_tb_customer_tb_fk (customer_id) REFERENCES customer_tb (c_id)
-	ON DELETE SET NULL
+	ON DELETE SET NULL,
 	FOREIGN KEY work_tb_work_type_tb_fk (work_type_id) REFERENCES work_type_tb (work_type_id)
 	ON DELETE SET NULL	
 		
