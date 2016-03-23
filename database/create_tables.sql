@@ -26,7 +26,7 @@ CREATE TABLE employee_tb (
 ) ENGINE=InnoDB DEFAULT CHARSET= utf8 DEFAULT COLLATE utf8_general_ci;
 
 CREATE TABLE employee_gotowork_tb (
-	date_at_work					DATE					NOT NULL,
+	date_at_work					DATETIME				NOT NULL,
 	time_at_work					DATETIME				NOT NULL,
 	time_leave_work					DATETIME,
 	
@@ -38,9 +38,38 @@ CREATE TABLE employee_gotowork_tb (
 
 /* Create Trigger 
  * When insert or update row in employee_gotowork_tb
- * Update e_check_out in employee_tb
- *
+ * Update 'e_check_out' and 'e_at_work' columns in employee_tb
+ * We update the 'e_check_out' and 'e_at_work' columns to let the system know that this emloyee is at workplace and ready to work
 */
+DELIMITER $$
+CREATE TRIGGER after_insert_gotowork_update_employee_tb
+AFTER INSERT ON employee_gotowork_tb 
+FOR EACH ROW
+BEGIN
+	UPDATE employee_tb	
+	SET	e_check_out = NEW.time_at_work, e_at_work = 1
+	WHERE e_id = NEW.employee_id;
+    
+END$$
+DELIMITER ;
+
+/* After_update_gotowork_update_employee_tb
+ * This trigger will fire when the row in employee_gotowork_tb is being updated
+ * Note: Make sure we only update 'time_leave_work' column in employee_gotowork_tb
+ * If the 'time_leave_work' is updated, the 'e_at_work' and 'e_working' will be reset to 0 which means this employee is not at workplace.
+ */
+
+DELIMITER $$
+CREATE TRIGGER after_update_gotowork_update_employee_tb
+AFTER UPDATE ON employee_gotowork_tb 
+FOR EACH ROW
+BEGIN
+	UPDATE employee_tb	
+	SET	e_at_work = 0, e_working = 0
+	WHERE e_id = NEW.employee_id;
+    
+END$$
+DELIMITER ;
 
 
 CREATE TABLE employee_skill_tb (
@@ -102,4 +131,33 @@ CREATE TABLE work_tb (
 		
 ) ENGINE=InnoDB DEFAULT CHARSET= utf8 DEFAULT COLLATE utf8_general_ci;
 
+/* After_update_work_tb_update_employee_tb
+ * This trigger will fire when a row in work_tb is being updated 
+ * We create this trigger to help update employee current status
+ * If the 'finish_date' column is updated then 'e_at_work' is 1, 'e_working' is 0, e_check_out = finish_date.
+ * If the 'started_date' column is updated then 'e_at_work' is 1, 'e_working' is 1, e_check_in = started_date 
+ */
 
+DELIMITER $$
+CREATE TRIGGER after_update_work_tb_update_employee_tb
+AFTER UPDATE ON work_tb
+FOR EACH ROW
+BEGIN
+	IF (NEW.finish_date > OLD.finish_date)  THEN
+	
+		UPDATE employee_tb	
+		SET	e_at_work = 1, e_working = 0, e_check_out = NEW.finish_date
+		WHERE e_id = NEW.employee_id;	
+	
+	END IF;
+	
+	IF (NEW.started_date > OLD.started_date) THEN
+	
+		UPDATE employee_tb	
+		SET	e_at_work = 1, e_working = 1, e_check_in = NEW.started_date
+		WHERE e_id = NEW.employee_id;
+		
+	END IF;
+    
+END$$
+DELIMITER ;
