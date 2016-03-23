@@ -2,8 +2,8 @@ CREATE DATABASE IF NOT EXISTS music_city_nails_db;
 
 USE music_city_nails_db;
 
-CREATE TABLE employee_tb (
-	e_id							INT						NOT NULL				AUTO_INCREMENT,
+CREATE TABLE employee_tbs (
+	id							INT						NOT NULL				AUTO_INCREMENT,
 	e_phone							VARCHAR(50)				NOT NULL,
 	e_email							VARCHAR(128)			,
 	e_first_name					VARCHAR(128)			NOT NULL,
@@ -21,11 +21,11 @@ CREATE TABLE employee_tb (
 	
 	e_avatar_url					VARCHAR(2083)			,
 	
-	PRIMARY KEY (e_id)
+	PRIMARY KEY (id)
 	
 ) ENGINE=InnoDB DEFAULT CHARSET= utf8 DEFAULT COLLATE utf8_general_ci;
 
-CREATE TABLE employee_gotowork_tb (
+CREATE TABLE employee_gotowork_tbs (
 	date_at_work					DATETIME				NOT NULL,
 	time_at_work					DATETIME				NOT NULL,
 	time_leave_work					DATETIME,
@@ -33,7 +33,7 @@ CREATE TABLE employee_gotowork_tb (
 	employee_id						INT	,	
 	
 	PRIMARY KEY (employee_id, date_at_work),
-	FOREIGN KEY employee_gotowork_fk (employee_id) REFERENCES employee_tb (e_id)
+	FOREIGN KEY employee_gotowork_fk (employee_id) REFERENCES employee_tbs (id)
 ) ENGINE=InnoDB DEFAULT CHARSET= utf8 DEFAULT COLLATE utf8_general_ci;
 
 /* Create Trigger 
@@ -43,12 +43,12 @@ CREATE TABLE employee_gotowork_tb (
 */
 DELIMITER $$
 CREATE TRIGGER after_insert_gotowork_update_employee_tb
-AFTER INSERT ON employee_gotowork_tb 
+AFTER INSERT ON employee_gotowork_tbs 
 FOR EACH ROW
 BEGIN
-	UPDATE employee_tb	
+	UPDATE employee_tbs	
 	SET	e_check_out = NEW.time_at_work, e_at_work = 1
-	WHERE e_id = NEW.employee_id;
+	WHERE id = NEW.employee_id;
     
 END$$
 DELIMITER ;
@@ -61,38 +61,38 @@ DELIMITER ;
 
 DELIMITER $$
 CREATE TRIGGER after_update_gotowork_update_employee_tb
-AFTER UPDATE ON employee_gotowork_tb 
+AFTER UPDATE ON employee_gotowork_tbs 
 FOR EACH ROW
 BEGIN
-	UPDATE employee_tb	
+	UPDATE employee_tbs	
 	SET	e_at_work = 0, e_working = 0
-	WHERE e_id = NEW.employee_id;
+	WHERE id = NEW.employee_id;
     
 END$$
 DELIMITER ;
 
 
-CREATE TABLE employee_skill_tb (
+CREATE TABLE employee_skill_tbs (
 	employee_id						INT						NOT NULL,
 	e_skill							VARCHAR(128)			NOT NULL,
 	
 	PRIMARY KEY (employee_id, e_skill),
-	FOREIGN KEY employee_skill_fk (employee_id) REFERENCES employee_tb (e_id)	
+	FOREIGN KEY employee_skill_fk (employee_id) REFERENCES employee_tbs (id)	
 ) ENGINE=InnoDB DEFAULT CHARSET= utf8 DEFAULT COLLATE utf8_general_ci;
 
-CREATE TABLE customer_tb (
-	c_id							BIGINT					UNSIGNED					NOT NULL		AUTO_INCREMENT,
+CREATE TABLE customer_tbs (
+	id							BIGINT					UNSIGNED					NOT NULL		AUTO_INCREMENT,
 	c_phone							VARCHAR(50)				,
 	c_email							VARCHAR(128)			,
 	c_firstname						VARCHAR(255)			,
 	c_lastname						VARCHAR(255)			,
 	
-	PRIMARY KEY (c_id)
+	PRIMARY KEY (id)
 	
 ) ENGINE=InnoDB DEFAULT CHARSET= utf8 DEFAULT COLLATE utf8_general_ci;
 
-CREATE TABLE work_type_tb (
-	work_type_id			INT				UNSIGNED	NOT NULL	AUTO_INCREMENT,
+CREATE TABLE work_type_tbs (
+	id			INT				UNSIGNED	NOT NULL	AUTO_INCREMENT,
 	work_name				VARCHAR(255)				NOT NULL,
 	work_category			VARCHAR(128),
 	description				TEXT,
@@ -101,15 +101,15 @@ CREATE TABLE work_type_tb (
 	
 	/*work_id					BIGINT						UNSIGNED			NOT NULL,*/
 	
-	PRIMARY KEY (work_type_id)
+	PRIMARY KEY (id)
 	/*FOREIGN KEY work_name_tb_work_tb_fk (work_id) REFERENCES work_tb (work_id)*/
 ) ENGINE=InnoDB DEFAULT CHARSET= utf8 DEFAULT COLLATE utf8_general_ci;
 
-CREATE TABLE work_tb (
-	work_id							BIGINT					UNSIGNED					NOT NULL 		AUTO_INCREMENT,
-	created_date					DATETIME				NOT NULL,
-	started_date					DATETIME				NOT NULL,
-	finish_date						DATETIME				NOT NULL,
+CREATE TABLE work_tbs (
+	id							BIGINT					UNSIGNED					NOT NULL 		AUTO_INCREMENT,
+	work_created_date					DATETIME				NOT NULL,
+	work_started_date					DATETIME				NOT NULL,
+	work_finished_date						DATETIME				NOT NULL,
 	total							FLOAT(10,2)				NOT NULL,
 	total_tip						FLOAT(10,2)				NOT NULL,
 	cash_amount						FLOAT(10,2)				NOT NULL,
@@ -121,12 +121,12 @@ CREATE TABLE work_tb (
 	customer_id						BIGINT					UNSIGNED,
 	work_type_id					INT						UNSIGNED,
 	
-	PRIMARY KEY (work_id),
-	FOREIGN KEY work_tb_employee_tb_fk (employee_id) REFERENCES employee_tb (e_id)
+	PRIMARY KEY (id),
+	FOREIGN KEY work_tb_employee_tb_fk (employee_id) REFERENCES employee_tbs (id)
 	ON DELETE SET NULL,
-	FOREIGN KEY work_tb_customer_tb_fk (customer_id) REFERENCES customer_tb (c_id)
+	FOREIGN KEY work_tb_customer_tb_fk (customer_id) REFERENCES customer_tbs (id)
 	ON DELETE SET NULL,
-	FOREIGN KEY work_tb_work_type_tb_fk (work_type_id) REFERENCES work_type_tb (work_type_id)
+	FOREIGN KEY work_tb_work_type_tb_fk (work_type_id) REFERENCES work_type_tbs (id)
 	ON DELETE SET NULL	
 		
 ) ENGINE=InnoDB DEFAULT CHARSET= utf8 DEFAULT COLLATE utf8_general_ci;
@@ -140,22 +140,22 @@ CREATE TABLE work_tb (
 
 DELIMITER $$
 CREATE TRIGGER after_update_work_tb_update_employee_tb
-AFTER UPDATE ON work_tb
+AFTER UPDATE ON work_tbs
 FOR EACH ROW
 BEGIN
-	IF (NEW.finish_date > OLD.finish_date)  THEN
+	IF (NEW.work_finished_date > OLD.work_finished_date)  THEN
 	
-		UPDATE employee_tb	
+		UPDATE employee_tbs	
 		SET	e_at_work = 1, e_working = 0, e_check_out = NEW.finish_date
-		WHERE e_id = NEW.employee_id;	
+		WHERE id = NEW.employee_id;	
 	
 	END IF;
 	
-	IF (NEW.started_date > OLD.started_date) THEN
+	IF (NEW.work_started_date > OLD.work_started_date) THEN
 	
-		UPDATE employee_tb	
+		UPDATE employee_tbs	
 		SET	e_at_work = 1, e_working = 1, e_check_in = NEW.started_date
-		WHERE e_id = NEW.employee_id;
+		WHERE id = NEW.employee_id;
 		
 	END IF;
     
