@@ -1,5 +1,5 @@
 
-INSERT INTO employee_tb ( e_phone, e_email, e_first_name, e_last_name, e_street, e_city, e_state, e_zip, e_password, e_at_work, e_working, e_avatar_url, e_check_in, e_check_out)
+INSERT INTO employee_tbs ( e_phone, e_email, e_first_name, e_last_name, e_street, e_city, e_state, e_zip, e_password, e_at_work, e_working, e_avatar_url, e_check_in, e_check_out)
 		VALUES ( '615-556-4210', 'binhsuse@gmail.com', 'binh', 'bui', '2008 Harvest Lane', 'Nashville', 'TN', '37218', '123456', '1', '0', 'http://kenhtiengviet.com/myavatar.png', NULL, NULL );
 		
 INSERT INTO employee_tb ( e_phone, e_email, e_first_name, e_last_name, e_street, e_city, e_state, e_zip, e_password, e_at_work, e_working, e_avatar_url)
