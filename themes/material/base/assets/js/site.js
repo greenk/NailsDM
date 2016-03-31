@@ -12,7 +12,7 @@
   // =============
   $.configs.set('site', {
     fontFamily: "Noto Sans, sans-serif",
-    primaryColor: "indigo",
+    primaryColor: "teal",
     assets: "../assets"
   });
 
