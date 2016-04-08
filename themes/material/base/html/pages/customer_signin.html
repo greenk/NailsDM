@@ -45,47 +45,67 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-
-  <!-- My Navigation -->
-  <nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-mega" role="navigation">
-    <div class="navbar-header">
-      ......
-    </div>
-    <div class="navbar-container container-fluid">
-      ......
-    </div>
-  </nav>
-  <!-- End of My Navigation -->
-
   <!-- Page -->
-  <div class="page container-fluid">
-    <!-- Page Header -->
-    <div class="page-header">
-      <h1 class="page-title">Page Title</h1>
-    </div>
-    <!-- End Page Header -->
+  <div class="page vertical-align">
 
     <!-- Page Content -->
-    <div class="page-content">
+    <div class="page-content vertical-align-middle">
       <div class="row">
-        <div class="col-xlg-4 col-md-6">
+        <div class="col-xlg-8 col-md-8">
           <!-- Example Panel With Heading -->
           <div class="panel panel-bordered">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel Heading</h3>
-            </div>
-            <div class="panel-body">
-              <h4>Body Heading</h4>
-              <p>Easily add a heading container to your panel with <code>.panel-heading</code>.
-                You may also include any <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>                with a <code>.panel-title</code> class to add a pre-styled heading.</p>
-              <p>For proper link coloring, be sure to place links in headings within
-                <code>.panel-title</code>.</p>
-            </div>
+            <div class="panel-body font-size-20">
+              <p class="font-size-40 font-weight-300 text-capitalize ">sign in</p>
+
+              <form action="#">
+                <div class="dms-signin-step">
+
+                  <div class="col-lg-5 col-md-5">
+                    <div class="form-group form-material floating ">
+                      <input class="form-control input-lg empty" name="customer_firstname" type="text"/>
+                      <label class="floating-label "><i class="icon md-account" aria-hidden="true"></i> &nbsp; First Name</label>
+                    </div>
+                    <div class="form-group form-material floating">
+                      <input class="form-control input-lg empty" name="customer_phonenumber" type="text"/>
+                      <label class="floating-label"><i class="icon md-phone"></i> &nbsp; Phone Number</label>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5">
+                    <div class="form-group form-material floating">
+                      <input class="form-control input-lg empty" name="customer_lastname" type="text"/>
+                      <label class="floating-label"> <i class="icon md-account" aria-hidden="true"></i> &nbsp; Last Name</label>
+                    </div>
+                    <div class="form-group form-material floating">
+                      <input class="form-control input-lg empty" name="customer_email" type="text"/>
+                      <label class="floating-label"><i class="icon md-email" aria-hidden="true"></i> &nbsp; Email</label>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+
+                  <p class="font-size-30 font-weight-300 text-capitalize ">select services</p>
+
+                  <ul>
+                    <li> Hand </li>
+                    <li> Feet </li>
+                    <li> Waxing </li>
+                    <li> Other </li>
+                  </ul>
+                  <p>
+                    <button class="btn btn-primary btn-lg"> Next </button>
+                  </p>
+                </div> <!-- End of Step -->
+
+            </form>
+
+            </div> <!-- End of panel body -->
           </div>
           <!-- End Example Panel With Heading -->
         </div>
 
-        <div class="col-xlg-4 col-md-6">
+        <div class="col-xlg-4 col-md-4">
+          <i class="icon md-time-countdown" aria-hidden="true"></i> <h1>Estimate Wait Time</h1>
+          <p> 30 mins</p>
           <!-- Example Panel With Footer -->
           <div class="panel panel-bordered">
             <div class="panel-body">
@@ -99,24 +119,7 @@
           <!-- End Example Panel With Footer -->
         </div>
 
-        <div class="clearfix visible-md-block visible-lg-block hidden-xlg"></div>
-        <div class="col-xlg-4 col-md-6">
-          <!-- Example Panel With All -->
-          <div class="panel panel-bordered">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel Heading</h3>
-            </div>
-            <div class="panel-body">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce velit
-                tortor, dictum in gravida nec, aliquet non lorem. pellentesque.ipiscing
-                elit. Fusce velit tortor.</P>
-            </div>
-            <div class="panel-footer">Panel Footer</div>
-          </div>
-          <!-- End Example Panel With All -->
-        </div>
-
-      </div>
+      </div> <!-- End of main row -->
 
     </div>
     <!-- End Page Content -->
