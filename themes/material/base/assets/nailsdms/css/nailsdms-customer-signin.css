@@ -1,0 +1,151 @@
+/* For customer signin page */
+
+.page-customer-signin {
+    font-family: Roboto, sans-serif;
+}
+
+/*Using nailsdms icon font for checkbox*/
+input[type='checkbox'].nailsdms-signin-checkbox + label:before,
+input[type='checkbox'].nailsdms-signin-checkbox + label:after{
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'nailsdms';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+input[type='checkbox'].nailsdms-signin-checkbox + label:before {
+    font-size: 5em;
+}
+
+input[type='checkbox'].nailsdms-signin-checkbox + label {
+    cursor: pointer;
+    font-family: Roboto, sans-serif;
+}
+
+input[type='checkbox']:checked.nailsdms-signin-checkbox + label:before {
+    /*font-size: 7em;*/
+    color: #009688;
+}
+
+input[type='checkbox'].nailsdms-signin-checkbox-hand + label:before{/*unchecked icon*/
+    content: "\e919";
+}
+input[type='checkbox']:checked.nailsdms-signin-checkbox-hand + label:before{/*checked icon*/
+    content: "\e919";
+}
+
+input[type='checkbox'].nailsdms-signin-checkbox-feet + label:before{/*unchecked icon*/
+    content: "\e91a";
+}
+input[type='checkbox']:checked.nailsdms-signin-checkbox-feet + label:before{/*checked icon*/
+    content: "\e91a";
+}
+
+input[type='checkbox'].nailsdms-signin-checkbox-waxing + label:before{/*unchecked icon*/
+    content: "\e91b";
+}
+input[type='checkbox']:checked.nailsdms-signin-checkbox-waxing + label:before{/*checked icon*/
+    content: "\e91b";
+}
+
+input[type='checkbox'].nailsdms-signin-checkbox-other + label:before, input[type='checkbox']:checked.nailsdms-signin-checkbox-other + label:before {/*unchecked icon*/
+    content: "\e903";
+}
+
+.nailsdms-signin-select-service li {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.dms-signin-title {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.dms-signin-addon-label {
+    line-height: 16px;
+}
+
+.dms-signin-accordion-group {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.dms-signin-accordion-title {
+    display: block;
+}
+
+.dms-signin-accordion-title::before {
+    content: '\f2fb';
+}
+.dms-signin-accordion-title::after {
+    content: '\f2f9';
+}
+
+.dms-signin-accordion-title::after, .dms-signin-accordion-title::before {
+    position: absolute;
+    /*top: 15px;*/
+    right: 30px;
+    font-family: Material-Design-Iconic-Font;
+    -webkit-transition: all .3s linear 0s;
+    -o-transition: all .3s linear 0s;
+    transition: all .3s linear 0s;
+}
+
+.dms-signin-accordion-title[aria-expanded="false"]::before {
+    opacity: 1;
+}
+.dms-signin-accordion-title[aria-expanded="true"]::before {
+    opacity: 0;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.dms-signin-accordion-title[aria-expanded="true"]::after {
+    opacity: 1;
+}
+.dms-signin-accordion-title[aria-expanded="false"]::after {
+    opacity: 0;
+}
+
+.dms-font-size-4em {
+    font-size: 4em !important;
+}
+.dms-font-size-5em {
+    font-size: 4em !important;
+}
+.dms-font-size-6em {
+    font-size: 4em !important;
+}
+
+.dms-signin-border-left {
+    border-left: solid 1px #e0e0e0;
+}
+
+.dms-signin-estimate-icon {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    border: solid 1px #e0e0e0;
+    text-align: center;
+    padding: 5px;
+    background-color: white;
+}
+
+.dms-signin-estimate-icon-bg {
+    padding: 5px;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+}
+
+.dms-signin-estimate-title {
+    border-bottom: 1px solid #9e9e9e;
+}
+
+

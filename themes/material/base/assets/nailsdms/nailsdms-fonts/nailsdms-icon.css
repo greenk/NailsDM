@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'nailsdms';
+    src:    url('fonts/nailsdms.eot?agqvv6');
+    src:    url('fonts/nailsdms.eot?agqvv6#iefix') format('embedded-opentype'),
+        url('fonts/nailsdms.ttf?agqvv6') format('truetype'),
+        url('fonts/nailsdms.woff?agqvv6') format('woff'),
+        url('fonts/nailsdms.svg?agqvv6#nailsdms') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="nailsdms-"],
+[class*=" nailsdms-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'nailsdms';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.nailsdms-small-brush:before {
+    content: "\e900";
+}
+.nailsdms-polish:before {
+    content: "\e901";
+}
+.nailsdms-outline-T:before {
+    content: "\e902";
+}
+.nailsdms-outline-OT:before {
+    content: "\e903";
+}
+.nailsdms-outline-French-T:before {
+    content: "\e904";
+}
+.nailsdms-outline-D-plus:before {
+    content: "\e905";
+}
+.nailsdms-lower-body:before {
+    content: "\e906";
+}
+.nailsdms-legs:before {
+    content: "\e907";
+}
+.nailsdms-hand:before {
+    content: "\e908";
+}
+.nailsdms-fill-PW:before {
+    content: "\e909";
+}
+.nailsdms-fill-PG:before {
+    content: "\e90a";
+}
+.nailsdms-fill-P:before {
+    content: "\e90b";
+}
+.nailsdms-fill-MG:before {
+    content: "\e90c";
+}
+.nailsdms-fill-M:before {
+    content: "\e90d";
+}
+.nailsdms-fill-G:before {
+    content: "\e90e";
+}
+.nailsdms-fill-D-plus:before {
+    content: "\e90f";
+}
+.nailsdms-fill-A:before {
+    content: "\e910";
+}
+.nailsdms-file:before {
+    content: "\e911";
+}
+.nailsdms-feet:before {
+    content: "\e912";
+}
+.nailsdms-face:before {
+    content: "\e913";
+}
+.nailsdms-cirlce-file:before {
+    content: "\e914";
+}
+.nailsdms-circle-small-brush:before {
+    content: "\e915";
+}
+.nailsdms-circle-polish:before {
+    content: "\e916";
+}
+.nailsdms-circle-lower-body:before {
+    content: "\e917";
+}
+.nailsdms-circle-legs:before {
+    content: "\e918";
+}
+.nailsdms-circle-hand:before {
+    content: "\e919";
+}
+.nailsdms-circle-feet:before {
+    content: "\e91a";
+}
+.nailsdms-circle-face:before {
+    content: "\e91b";
+}
+.nailsdms-circle-body:before {
+    content: "\e91c";
+}
+.nailsdms-circle-big-brush:before {
+    content: "\e91d";
+}
+.nailsdms-body:before {
+    content: "\e91e";
+}
+.nailsdms-big-brush:before {
+    content: "\e91f";
+}
+
