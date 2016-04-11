@@ -62,7 +62,7 @@
       <div class="row">
         <div class="col-xlg-8 col-md-8 col-lg-8">
           <!-- Example Panel With Heading -->
-          <div class="panel panel-bordered">
+          <div class="panel">
             <div class="panel-body font-size-20">
 
               <form action="#" method="get" >
@@ -70,27 +70,28 @@
 
                 <div class="dms-signin-step ">
                   <p class="font-size-40 font-weight-300 text-capitalize margin-bottom-20 dms-signin-title">sign in</p>
+                  <div class="row">
+                    <div class="col-lg-5 col-md-5">
 
-                  <div class="col-lg-5 col-md-5">
+                      <div class="form-group form-material floating">
+                        <input class="form-control input-lg" name="customer_firstname" type="text" tabindex="1"/>
+                        <label class="floating-label"><i class="icon md-account" aria-hidden="true"></i> &nbsp; First Name</label>
+                      </div>
+                      <div class="form-group form-material floating">
+                        <input class="form-control input-lg" name="customer_phonenumber" type="text" tabindex="3"/>
+                        <label class="floating-label"><i class="icon md-phone"></i> &nbsp; Phone Number</label>
+                      </div>
+                    </div>
 
-                    <div class="form-group form-material floating">
-                      <input class="form-control input-lg" name="customer_firstname" type="text" tabindex="1"/>
-                      <label class="floating-label"><i class="icon md-account" aria-hidden="true"></i> &nbsp; First Name</label>
-                    </div>
-                    <div class="form-group form-material floating">
-                      <input class="form-control input-lg" name="customer_phonenumber" type="text" tabindex="3"/>
-                      <label class="floating-label"><i class="icon md-phone"></i> &nbsp; Phone Number</label>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5">
-                    <div class="form-group form-material floating">
-                      <input class="form-control input-lg" name="customer_lastname" type="text" tabindex="2"/>
-                      <label class="floating-label"> <i class="icon md-account" aria-hidden="true"></i> &nbsp; Last Name</label>
-                    </div>
-                    <div class="form-group form-material floating">
-                      <input class="form-control input-lg" name="customer_email" type="text" tabindex="4"/>
-                      <label class="floating-label"><i class="icon md-email" aria-hidden="true"></i> &nbsp; Email</label>
+                    <div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5">
+                      <div class="form-group form-material floating">
+                        <input class="form-control input-lg" name="customer_lastname" type="text" tabindex="2"/>
+                        <label class="floating-label"> <i class="icon md-account" aria-hidden="true"></i> &nbsp; Last Name</label>
+                      </div>
+                      <div class="form-group form-material floating">
+                        <input class="form-control input-lg" name="customer_email" type="text" tabindex="4"/>
+                        <label class="floating-label"><i class="icon md-email" aria-hidden="true"></i> &nbsp; Email</label>
+                      </div>
                     </div>
                   </div>
                   <div class="clearfix"></div>
@@ -127,92 +128,143 @@
 
                 <div class="dms-signin-step" style="display: none;">
                   <p class="font-size-30 font-weight-300 text-capitalize margin-bottom-20 dms-signin-title">Hand Services</p>
-                  <div class="col-md-1 col-lg-1 col-xlg-1">
-                    <i class="nailsdms-circle-hand block dms-font-size-4em"></i>
-                    <p class="text-center">Hand</p>
+                  <div class="row">
+                    <div class="col-md-2 col-lg-2 col-xlg-2 text-center">
+                      <i class="nailsdms-circle-hand block dms-font-size-4em"></i>
+                      <p class="text-center">Hand</p>
 
-                  </div>
-                  <div class="col-md-10 col-lg-10 col-xlg-10 margin-left-20 dms-signin-border-left ">
-                    <div class="dms-signin-accordion-group">
-                      <a class="dms-signin-accordion-title collapsed font-weight-400 font-size-30" data-toggle="collapse" href="#manicure-type" aria-expanded="false" aria-controls="manicure-type">Manicure </a>
                     </div>
-                    <div id="manicure-type" class="collapse" aria-expanded="false" >
-                       <div>
-                         <div class="radio-custom radio-primary">
-                           <input id="regular-manicure" type="radio" name="hand-select-type" />
-                           <label for="regular-manicure" class="dms-signin-addon-label text-capitalize"> Manicure $15</label>
-                           <div class="font-size-14">
-                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                           </div>
-                         </div>
-                         <div class="radio-custom radio-primary">
-                           <input id="signature-manicure" type="radio" name="hand-select-type" />
-                           <label for="signature-manicure" class="dms-signin-addon-label text-capitalize">  Signature Manicure $25</label>
-                           <div class="font-size-14">
-                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                           </div>
-                         </div>
-                         <div class="radio-custom radio-primary">
-                           <input id="deluxe-manicure" type="radio" name="hand-select-type" />
-                           <label for="deluxe-manicure" class="dms-signin-addon-label text-capitalize">  Deluxe Manicure $25</label>
-                           <div class="font-size-14">
-                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                           </div>
-                         </div>
+                    <div class="col-md-10 col-lg-10 col-xlg-10 dms-signin-border-left ">
+                      <div class="dms-signin-accordion-group">
+                        <a class="dms-signin-accordion-title collapsed font-weight-400 font-size-30" data-toggle="collapse" href="#manicure-type" aria-expanded="false" aria-controls="manicure-type">Manicure </a>
+                      </div>
+                      <div id="manicure-type" class="collapse" aria-expanded="false" >
+                        <div>
+                          <div class="radio-custom radio-primary">
+                            <input id="regular-manicure" type="radio" name="hand-select-type" />
+                            <label for="regular-manicure" class="dms-signin-addon-label text-capitalize"> Manicure $15</label>
+                            <div class="font-size-14">
+                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </div>
+                          </div>
+                          <div class="radio-custom radio-primary">
+                            <input id="signature-manicure" type="radio" name="hand-select-type" />
+                            <label for="signature-manicure" class="dms-signin-addon-label text-capitalize">  Signature Manicure $25</label>
+                            <div class="font-size-14">
+                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </div>
+                          </div>
+                          <div class="radio-custom radio-primary">
+                            <input id="deluxe-manicure" type="radio" name="hand-select-type" />
+                            <label for="deluxe-manicure" class="dms-signin-addon-label text-capitalize">  Deluxe Manicure $25</label>
+                            <div class="font-size-14">
+                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </div>
+                          </div>
 
-                         <div class="font-size-16">
-                          <span class="font-size-18">Add: &nbsp;</span>
-                          <div class="checkbox-custom checkbox-primary checkbox-inline">
-                            <input id="manicure-addon-gel" type="checkbox" />
-                            <label for="manicure-addon-gel"> + Gel Color $25</label>
+                          <div class="font-size-16">
+                            <span class="font-size-18">Add: &nbsp;</span>
+                            <div class="checkbox-custom checkbox-primary checkbox-inline">
+                              <input id="manicure-addon-gel" type="checkbox" />
+                              <label for="manicure-addon-gel"> + Gel Color $25</label>
 
+                            </div>
+                            <div class="checkbox-custom checkbox-primary checkbox-inline">
+                              <input id="manicure-addon-french" type="checkbox" />
+                              <label for="manicure-addon-french"> + French Tip $5</label>
+                            </div>
+                            <div class="checkbox-custom checkbox-primary checkbox-inline">
+                              <input id="manicure-addon-design" type="checkbox" />
+                              <label for="manicure-addon-design"> + Design $5/2 toes</label>
+                            </div>
+                            <div class="checkbox-custom checkbox-primary checkbox-inline">
+                              <input id="manicure-addon-other-request" type="checkbox" />
+                              <label for="manicure-addon-other-request"> + Other Request</label>
+                            </div>
                           </div>
-                          <div class="checkbox-custom checkbox-primary checkbox-inline">
-                            <input id="manicure-addon-french" type="checkbox" />
-                            <label for="manicure-addon-french"> + French Tip $5</label>
-                          </div>
-                          <div class="checkbox-custom checkbox-primary checkbox-inline">
-                            <input id="manicure-addon-design" type="checkbox" />
-                            <label for="manicure-addon-design"> + Design $5/2 toes</label>
-                          </div>
-                          <div class="checkbox-custom checkbox-primary checkbox-inline">
-                            <input id="manicure-addon-other-request" type="checkbox" />
-                            <label for="manicure-addon-other-request"> + Other Request</label>
-                          </div>
+
                         </div>
+                      </div>
 
-                       </div>
-                    </div>
+                      <div class="dms-signin-accordion-group">
+                        <a class="collapsed dms-signin-accordion-title font-weight-400 font-size-30" data-toggle="collapse" href="#hand-acrylic-type" aria-expanded="false" aria-controls="hand-acrylic-type">Acrylic </a>
+                      </div>
+                      <div id="hand-acrylic-type" class="collapse" aria-expanded="false">
+                        <div>
+                          <div class="radio-custom radio-primary">
+                            <input id="hand-acrylic-fullset" type="radio" name="hand-select-type" />
+                            <label for="hand-acrylic-fullset" class="dms-signin-addon-label text-capitalize"> Acrylic Full Set $30</label>
+                            <div class="font-size-14">
+                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </div>
+                          </div>
+                          <div class="radio-custom radio-primary">
+                            <input id="hand-acrylic-fillin" type="radio" name="hand-select-type" />
+                            <label for="hand-acrylic-fillin" class="dms-signin-addon-label text-capitalize">  acrylic fill in $20</label>
+                            <div class="font-size-14">
+                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </div>
+                          </div>
+                          <div class="radio-custom radio-primary">
+                            <input id="hand-acrylic-pinkandwhite-fullset" type="radio" name="hand-select-type" />
+                            <label for="hand-acrylic-pinkandwhite-fullset" class="dms-signin-addon-label text-capitalize">  pink and white $45</label>
+                            <div class="font-size-14">
+                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </div>
+                          </div>
+                          <div class="radio-custom radio-primary">
+                            <input id="hand-acrylic-pinkandwhite-fillin" type="radio" name="hand-select-type" />
+                            <label for="hand-acrylic-pinkandwhite-fillin" class="dms-signin-addon-label text-capitalize">  pink and white $45</label>
+                            <div class="font-size-14">
+                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </div>
+                          </div>
 
-                    <div class="dms-signin-accordion-group">
-                      <a class="collapsed dms-signin-accordion-title font-weight-400 font-size-30" data-toggle="collapse" href="#hand-acrylic-type" aria-expanded="false" aria-controls="hand-acrylic-type">Acrylic </a>
-                    </div>
-                    <div id="hand-acrylic-type" class="collapse" aria-expanded="false">
-                      <div>
+                          <div class="font-size-16">
+                            <span class="font-size-18">Add: &nbsp;</span>
+                            <div class="checkbox-custom checkbox-primary checkbox-inline">
+                              <input id="hand-acrylic-addon-gel" type="checkbox" />
+                              <label for="hand-acrylic-addon-gel"> + Gel Color $25</label>
+
+                            </div>
+                            <div class="checkbox-custom checkbox-primary checkbox-inline">
+                              <input id="hand-acrylic-addon-french" type="checkbox" />
+                              <label for="hand-acrylic-addon-french"> + French Tip $5</label>
+                            </div>
+                            <div class="checkbox-custom checkbox-primary checkbox-inline">
+                              <input id="hand-acrylic-addon-design" type="checkbox" />
+                              <label for="hand-acrylic-addon-design"> + Design $5/2 toes</label>
+                            </div>
+                            <div class="checkbox-custom checkbox-primary checkbox-inline">
+                              <input id="hand-acrylic-addon-other-request" type="checkbox" />
+                              <label for="hand-acrylic-addon-other-request"> + Other Request</label>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <div class="dms-signin-accordion-group">
+                        <a class="dms-signin-accordion-title collapsed font-weight-400 font-size-30" data-toggle="collapse" href="#hand-other-type" aria-expanded="false" aria-controls="hand-other-type">Others </a>
+                      </div>
+                      <div id="hand-other-type" class="collapse" aria-expanded="false">
                         <div class="radio-custom radio-primary">
-                          <input id="hand-acrylic-fullset" type="radio" name="hand-select-type" />
-                          <label for="hand-acrylic-fullset" class="dms-signin-addon-label text-capitalize"> Acrylic Full Set $30</label>
+                          <input id="hand-polish-change" type="radio" name="hand-select-type" />
+                          <label for="hand-polish-change" class="dms-signin-addon-label text-capitalize">  polish change $10</label>
                           <div class="font-size-14">
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                           </div>
                         </div>
                         <div class="radio-custom radio-primary">
-                          <input id="hand-acrylic-fillin" type="radio" name="hand-select-type" />
-                          <label for="hand-acrylic-fillin" class="dms-signin-addon-label text-capitalize">  acrylic fill in $20</label>
+                          <input id="hand-gel-polish-change" type="radio" name="hand-select-type" />
+                          <label for="hand-gel-polish-change" class="dms-signin-addon-label text-capitalize">  gel polish change</label>
                           <div class="font-size-14">
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                           </div>
                         </div>
                         <div class="radio-custom radio-primary">
-                          <input id="hand-acrylic-pinkandwhite-fullset" type="radio" name="hand-select-type" />
-                          <label for="hand-acrylic-pinkandwhite-fullset" class="dms-signin-addon-label text-capitalize">  pink and white $45</label>
-                          <div class="font-size-14">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                          </div>
-                        </div>
-                        <div class="radio-custom radio-primary">
-                          <input id="hand-acrylic-pinkandwhite-fillin" type="radio" name="hand-select-type" />
-                          <label for="hand-acrylic-pinkandwhite-fillin" class="dms-signin-addon-label text-capitalize">  pink and white $45</label>
+                          <input id="hand-acrylic-fix" type="radio" name="hand-select-type" />
+                          <label for="hand-acrylic-fix" class="dms-signin-addon-label text-capitalize">  fixing acrylic $5/toe</label>
                           <div class="font-size-14">
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                           </div>
@@ -221,66 +273,17 @@
                         <div class="font-size-16">
                           <span class="font-size-18">Add: &nbsp;</span>
                           <div class="checkbox-custom checkbox-primary checkbox-inline">
-                            <input id="hand-acrylic-addon-gel" type="checkbox" />
-                            <label for="hand-acrylic-addon-gel"> + Gel Color $25</label>
-
+                            <input id="hand-other-addon-french" type="checkbox" />
+                            <label for="hand-other-addon-french"> + French Tip $5</label>
                           </div>
                           <div class="checkbox-custom checkbox-primary checkbox-inline">
-                            <input id="hand-acrylic-addon-french" type="checkbox" />
-                            <label for="hand-acrylic-addon-french"> + French Tip $5</label>
+                            <input id="hand-other-addon-design" type="checkbox" />
+                            <label for="hand-other-addon-design"> + Design $5/2 toes</label>
                           </div>
                           <div class="checkbox-custom checkbox-primary checkbox-inline">
-                            <input id="hand-acrylic-addon-design" type="checkbox" />
-                            <label for="hand-acrylic-addon-design"> + Design $5/2 toes</label>
+                            <input id="hand-other-addon-other-request" type="checkbox" />
+                            <label for="hand-other-addon-other-request"> + Other Request</label>
                           </div>
-                          <div class="checkbox-custom checkbox-primary checkbox-inline">
-                            <input id="hand-acrylic-addon-other-request" type="checkbox" />
-                            <label for="hand-acrylic-addon-other-request"> + Other Request</label>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-
-                    <div class="dms-signin-accordion-group">
-                      <a class="dms-signin-accordion-title collapsed font-weight-400 font-size-30" data-toggle="collapse" href="#hand-other-type" aria-expanded="false" aria-controls="hand-other-type">Others </a>
-                    </div>
-                    <div id="hand-other-type" class="collapse" aria-expanded="false">
-                      <div class="radio-custom radio-primary">
-                        <input id="hand-polish-change" type="radio" name="hand-select-type" />
-                        <label for="hand-polish-change" class="dms-signin-addon-label text-capitalize">  polish change $10</label>
-                        <div class="font-size-14">
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        </div>
-                      </div>
-                      <div class="radio-custom radio-primary">
-                        <input id="hand-gel-polish-change" type="radio" name="hand-select-type" />
-                        <label for="hand-gel-polish-change" class="dms-signin-addon-label text-capitalize">  gel polish change</label>
-                        <div class="font-size-14">
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        </div>
-                      </div>
-                      <div class="radio-custom radio-primary">
-                        <input id="hand-acrylic-fix" type="radio" name="hand-select-type" />
-                        <label for="hand-acrylic-fix" class="dms-signin-addon-label text-capitalize">  fixing acrylic $5/toe</label>
-                        <div class="font-size-14">
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        </div>
-                      </div>
-
-                      <div class="font-size-16">
-                        <span class="font-size-18">Add: &nbsp;</span>
-                        <div class="checkbox-custom checkbox-primary checkbox-inline">
-                          <input id="hand-other-addon-french" type="checkbox" />
-                          <label for="hand-other-addon-french"> + French Tip $5</label>
-                        </div>
-                        <div class="checkbox-custom checkbox-primary checkbox-inline">
-                          <input id="hand-other-addon-design" type="checkbox" />
-                          <label for="hand-other-addon-design"> + Design $5/2 toes</label>
-                        </div>
-                        <div class="checkbox-custom checkbox-primary checkbox-inline">
-                          <input id="hand-other-addon-other-request" type="checkbox" />
-                          <label for="hand-other-addon-other-request"> + Other Request</label>
                         </div>
                       </div>
                     </div>
@@ -296,164 +299,166 @@
 
                 <div class="dms-signin-step" style="display: none;">
                   <p class="font-size-30 font-weight-300 text-capitalize margin-bottom-20 dms-signin-title">Feet Services</p>
-                  <div class="col-md-1 col-lg-1 col-xlg-1">
-                    <i class="nailsdms-circle-feet block dms-font-size-4em"></i>
-                    <p class="text-center">Feet</p>
+                  <div class="row">
+                    <div class="col-md-2 col-lg-2 col-xlg-2 text-center">
+                      <i class="nailsdms-circle-feet block dms-font-size-4em"></i>
+                      <p class="text-center">Feet</p>
 
-                  </div>
-                  <div class="col-md-10 col-lg-10 col-xlg-10 margin-left-20 dms-signin-border-left ">
-                    <div class="dms-signin-accordion-group">
-                      <a class="dms-signin-accordion-title collapsed font-weight-400 font-size-30" data-toggle="collapse" href="#pedicure-type" aria-expanded="false" aria-controls="pedicure-type">Pedicure </a>
                     </div>
-                    <div id="pedicure-type" class="margin-bottom-10 collapse" aria-expanded="false" >
-                      <div>
-                        <div class="radio-custom radio-primary">
-                          <input id="regular-pedicure" type="radio" name="feet-select-type" />
-                          <label for="regular-pedicure" class="dms-signin-addon-label text-capitalize"> Pedicure $25</label>
-                          <div class="font-size-14 margin-left-20">
-                            <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus</p>
+                    <div class="col-md-10 col-lg-10 col-xlg-10 dms-signin-border-left ">
+                      <div class="dms-signin-accordion-group">
+                        <a class="dms-signin-accordion-title collapsed font-weight-400 font-size-30" data-toggle="collapse" href="#pedicure-type" aria-expanded="false" aria-controls="pedicure-type">Pedicure </a>
+                      </div>
+                      <div id="pedicure-type" class="margin-bottom-10 collapse" aria-expanded="false" >
+                        <div>
+                          <div class="radio-custom radio-primary">
+                            <input id="regular-pedicure" type="radio" name="feet-select-type" />
+                            <label for="regular-pedicure" class="dms-signin-addon-label text-capitalize"> Pedicure $25</label>
+                            <div class="font-size-14 margin-left-20">
+                              <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus</p>
+                            </div>
                           </div>
+                          <div class="radio-custom radio-primary">
+                            <input id="signature-pedicure" type="radio" name="feet-select-type" />
+                            <label for="signature-pedicure" class="dms-signin-addon-label text-capitalize">  signature pedicure $30</label>
+                            <div class="font-size-14 margin-left-20">
+                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </div>
+                          </div>
+                          <div class="radio-custom radio-primary">
+                            <input id="deluxe-pedicure" type="radio" name="feet-select-type" />
+                            <label for="deluxe-pedicure" class="dms-signin-addon-label text-capitalize">  deluxe pedicure $40</label>
+                            <div class="font-size-14 margin-left-20">
+                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </div>
+                          </div>
+                          <div class="font-size-16">
+                            <span class="font-size-18">Add: &nbsp;</span>
+                            <div class="checkbox-custom checkbox-primary checkbox-inline">
+                              <input id="pedicure-addon-gel" type="checkbox" />
+                              <label for="pedicure-addon-gel"> + Gel Color $25</label>
+
+                            </div>
+                            <div class="checkbox-custom checkbox-primary checkbox-inline">
+                              <input id="pedicure-addon-french" type="checkbox" />
+                              <label for="pedicure-addon-french"> + French Tip $5</label>
+                            </div>
+                            <div class="checkbox-custom checkbox-primary checkbox-inline">
+                              <input id="pedicure-addon-design" type="checkbox" />
+                              <label for="pedicure-addon-design"> + Design $5/2 toes</label>
+                            </div>
+                            <div class="checkbox-custom checkbox-primary checkbox-inline">
+                              <input id="pedicure-addon-other-request" type="checkbox" />
+                              <label for="pedicure-addon-other-request"> + Other Request</label>
+                            </div>
+                          </div>
+
                         </div>
+                      </div>
+
+                      <div class="dms-signin-accordion-group">
+                        <a class="collapsed dms-signin-accordion-title font-weight-400 font-size-30" data-toggle="collapse" href="#feet-acrylic-type" aria-expanded="false" aria-controls="feet-acrylic-type">Acrylic </a>
+                      </div>
+                      <div id="feet-acrylic-type" class="collapse" aria-expanded="false">
+                        <div>
+                          <div class="radio-custom radio-primary">
+                            <input id="acrylic-feet-fullset" type="radio" name="feet-select-type" />
+                            <label for="acrylic-feet-fullset" class="dms-signin-addon-label text-capitalize"> Acrylic Full Set $30</label>
+                            <div class="font-size-14">
+                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </div>
+                          </div>
+                          <div class="radio-custom radio-primary">
+                            <input id="acrylic-feet-fillin" type="radio" name="feet-select-type" />
+                            <label for="acrylic-feet-fillin" class="dms-signin-addon-label text-capitalize">  acrylic fill-in $20</label>
+                            <div class="font-size-14">
+                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </div>
+                          </div>
+                          <div class="radio-custom radio-primary">
+                            <input id="acrylic-feet-pinkandwhite-fullset" type="radio" name="feet-select-type" />
+                            <label for="acrylic-feet-pinkandwhite-fullset" class="dms-signin-addon-label text-capitalize">  pink and white $45</label>
+                            <div class="font-size-14">
+                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </div>
+                          </div>
+                          <div class="radio-custom radio-primary">
+                            <input id="acrylic-feet-pinkandwhite-fillin" type="radio" name="feet-select-type" />
+                            <label for="acrylic-feet-pinkandwhite-fillin" class="dms-signin-addon-label text-capitalize">  pink and white fill-in $45</label>
+                            <div class="font-size-14">
+                              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            </div>
+                          </div>
+
+                          <div class="font-size-16">
+                            <span class="font-size-18">Add: &nbsp;</span>
+                            <div class="checkbox-custom checkbox-primary checkbox-inline">
+                              <input id="feet-acrylic-addon-gel" type="checkbox" />
+                              <label for="feet-acrylic-addon-gel"> + Gel Color $25</label>
+
+                            </div>
+                            <div class="checkbox-custom checkbox-primary checkbox-inline">
+                              <input id="feet-acrylic-addon-french" type="checkbox" />
+                              <label for="feet-acrylic-addon-french"> + French Tip $5</label>
+                            </div>
+                            <div class="checkbox-custom checkbox-primary checkbox-inline">
+                              <input id="feet-acrylic-addon-design" type="checkbox" />
+                              <label for="feet-acrylic-addon-design"> + Design $5/2 toes</label>
+                            </div>
+                            <div class="checkbox-custom checkbox-primary checkbox-inline">
+                              <input id="feet-acrylic-addon-other-request" type="checkbox" />
+                              <label for="feet-acrylic-addon-other-request"> + Other Request</label>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <div class="dms-signin-accordion-group">
+                        <a class="dms-signin-accordion-title collapsed font-weight-400 font-size-30" data-toggle="collapse" href="#feet-other-type" aria-expanded="false" aria-controls="feet-other-type">Others </a>
+                      </div>
+                      <div id="feet-other-type" class="collapse" aria-expanded="false">
                         <div class="radio-custom radio-primary">
-                          <input id="signature-pedicure" type="radio" name="feet-select-type" />
-                          <label for="signature-pedicure" class="dms-signin-addon-label text-capitalize">  signature pedicure $30</label>
-                          <div class="font-size-14 margin-left-20">
+                          <input id="feet-polish-change" type="radio" name="feet-select-type" />
+                          <label for="feet-polish-change" class="dms-signin-addon-label text-capitalize">  polish change $10</label>
+                          <div class="font-size-14">
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                           </div>
                         </div>
                         <div class="radio-custom radio-primary">
-                          <input id="deluxe-pedicure" type="radio" name="feet-select-type" />
-                          <label for="deluxe-pedicure" class="dms-signin-addon-label text-capitalize">  deluxe pedicure $40</label>
-                          <div class="font-size-14 margin-left-20">
+                          <input id="feet-gel-polish-change" type="radio" name="feet-select-type" />
+                          <label for="feet-gel-polish-change" class="dms-signin-addon-label text-capitalize">  gel polish change</label>
+                          <div class="font-size-14">
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                           </div>
                         </div>
+                        <div class="radio-custom radio-primary">
+                          <input id="feet-acrylic-fix" type="radio" name="feet-select-type" />
+                          <label for="feet-acrylic-fix" class="dms-signin-addon-label text-capitalize">  fixing acrylic $5/toe</label>
+                          <div class="font-size-14">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                          </div>
+                        </div>
+
                         <div class="font-size-16">
                           <span class="font-size-18">Add: &nbsp;</span>
                           <div class="checkbox-custom checkbox-primary checkbox-inline">
-                            <input id="pedicure-addon-gel" type="checkbox" />
-                            <label for="pedicure-addon-gel"> + Gel Color $25</label>
-
+                            <input id="feet-other-addon-french" type="checkbox" />
+                            <label for="feet-other-addon-french"> + French Tip $5</label>
                           </div>
                           <div class="checkbox-custom checkbox-primary checkbox-inline">
-                            <input id="pedicure-addon-french" type="checkbox" />
-                            <label for="pedicure-addon-french"> + French Tip $5</label>
+                            <input id="feet-other-addon-design" type="checkbox" />
+                            <label for="feet-other-addon-design"> + Design $5/2 toes</label>
                           </div>
                           <div class="checkbox-custom checkbox-primary checkbox-inline">
-                            <input id="pedicure-addon-design" type="checkbox" />
-                            <label for="pedicure-addon-design"> + Design $5/2 toes</label>
-                          </div>
-                          <div class="checkbox-custom checkbox-primary checkbox-inline">
-                            <input id="pedicure-addon-other-request" type="checkbox" />
-                            <label for="pedicure-addon-other-request"> + Other Request</label>
+                            <input id="feet-other-addon-other-request" type="checkbox" />
+                            <label for="feet-other-addon-other-request"> + Other Request</label>
                           </div>
                         </div>
 
-                      </div>
-                    </div>
-
-                    <div class="dms-signin-accordion-group">
-                      <a class="collapsed dms-signin-accordion-title font-weight-400 font-size-30" data-toggle="collapse" href="#feet-acrylic-type" aria-expanded="false" aria-controls="feet-acrylic-type">Acrylic </a>
-                    </div>
-                    <div id="feet-acrylic-type" class="collapse" aria-expanded="false">
-                      <div>
-                        <div class="radio-custom radio-primary">
-                          <input id="acrylic-feet-fullset" type="radio" name="feet-select-type" />
-                          <label for="acrylic-feet-fullset" class="dms-signin-addon-label text-capitalize"> Acrylic Full Set $30</label>
-                          <div class="font-size-14">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                          </div>
-                        </div>
-                        <div class="radio-custom radio-primary">
-                          <input id="acrylic-feet-fillin" type="radio" name="feet-select-type" />
-                          <label for="acrylic-feet-fillin" class="dms-signin-addon-label text-capitalize">  acrylic fill-in $20</label>
-                          <div class="font-size-14">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                          </div>
-                        </div>
-                        <div class="radio-custom radio-primary">
-                          <input id="acrylic-feet-pinkandwhite-fullset" type="radio" name="feet-select-type" />
-                          <label for="acrylic-feet-pinkandwhite-fullset" class="dms-signin-addon-label text-capitalize">  pink and white $45</label>
-                          <div class="font-size-14">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                          </div>
-                        </div>
-                        <div class="radio-custom radio-primary">
-                          <input id="acrylic-feet-pinkandwhite-fillin" type="radio" name="feet-select-type" />
-                          <label for="acrylic-feet-pinkandwhite-fillin" class="dms-signin-addon-label text-capitalize">  pink and white fill-in $45</label>
-                          <div class="font-size-14">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                          </div>
-                        </div>
-
-                        <div class="font-size-16">
-                          <span class="font-size-18">Add: &nbsp;</span>
-                          <div class="checkbox-custom checkbox-primary checkbox-inline">
-                            <input id="feet-acrylic-addon-gel" type="checkbox" />
-                            <label for="feet-acrylic-addon-gel"> + Gel Color $25</label>
-
-                          </div>
-                          <div class="checkbox-custom checkbox-primary checkbox-inline">
-                            <input id="feet-acrylic-addon-french" type="checkbox" />
-                            <label for="feet-acrylic-addon-french"> + French Tip $5</label>
-                          </div>
-                          <div class="checkbox-custom checkbox-primary checkbox-inline">
-                            <input id="feet-acrylic-addon-design" type="checkbox" />
-                            <label for="feet-acrylic-addon-design"> + Design $5/2 toes</label>
-                          </div>
-                          <div class="checkbox-custom checkbox-primary checkbox-inline">
-                            <input id="feet-acrylic-addon-other-request" type="checkbox" />
-                            <label for="feet-acrylic-addon-other-request"> + Other Request</label>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-
-                    <div class="dms-signin-accordion-group">
-                      <a class="dms-signin-accordion-title collapsed font-weight-400 font-size-30" data-toggle="collapse" href="#feet-other-type" aria-expanded="false" aria-controls="feet-other-type">Others </a>
-                    </div>
-                    <div id="feet-other-type" class="collapse" aria-expanded="false">
-                      <div class="radio-custom radio-primary">
-                        <input id="feet-polish-change" type="radio" name="feet-select-type" />
-                        <label for="feet-polish-change" class="dms-signin-addon-label text-capitalize">  polish change $10</label>
-                        <div class="font-size-14">
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        </div>
-                      </div>
-                      <div class="radio-custom radio-primary">
-                        <input id="feet-gel-polish-change" type="radio" name="feet-select-type" />
-                        <label for="feet-gel-polish-change" class="dms-signin-addon-label text-capitalize">  gel polish change</label>
-                        <div class="font-size-14">
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        </div>
-                      </div>
-                      <div class="radio-custom radio-primary">
-                        <input id="feet-acrylic-fix" type="radio" name="feet-select-type" />
-                        <label for="feet-acrylic-fix" class="dms-signin-addon-label text-capitalize">  fixing acrylic $5/toe</label>
-                        <div class="font-size-14">
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        </div>
-                      </div>
-
-                      <div class="font-size-16">
-                        <span class="font-size-18">Add: &nbsp;</span>
-                        <div class="checkbox-custom checkbox-primary checkbox-inline">
-                          <input id="feet-other-addon-french" type="checkbox" />
-                          <label for="feet-other-addon-french"> + French Tip $5</label>
-                        </div>
-                        <div class="checkbox-custom checkbox-primary checkbox-inline">
-                          <input id="feet-other-addon-design" type="checkbox" />
-                          <label for="feet-other-addon-design"> + Design $5/2 toes</label>
-                        </div>
-                        <div class="checkbox-custom checkbox-primary checkbox-inline">
-                          <input id="feet-other-addon-other-request" type="checkbox" />
-                          <label for="feet-other-addon-other-request"> + Other Request</label>
-                        </div>
                       </div>
 
                     </div>
-
                   </div>
                   <div class="clearfix"></div>
 
@@ -465,18 +470,20 @@
                 <!-- Start of final step -->
 
                 <div id="dms-signin-final-step" class="dms-signin-step" style="display: none;" >
-                  <div class="col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10 text-center margin-top-30">
-                    <h1 class="font-size-50 font-weight-300 dms-signin-title"> Thank you</h1>
-                    <p class="font-size-30">Do you request for a specific nail text</p>
-                    <div class="radio-custom radio-primary radio-inline">
-                      <input id="request-a-nail-tech-yes" type="radio" name="request-a-nail-tech" />
-                      <label for="request-a-nail-tech-yes"> Yes </label>
-                    </div>
-                    <div class="radio-custom radio-primary radio-inline">
-                      <input id="request-a-nail-tech-no" type="radio" name="request-a-nail-tech" checked />
-                      <label for="request-a-nail-tech-no"> No </label>
-                    </div>
+                  <div class="row">
+                    <div class="col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10 text-center margin-top-30">
+                      <h1 class="font-size-50 font-weight-300 dms-signin-title"> Thank you</h1>
+                      <p class="font-size-30">Do you request for a specific nail text</p>
+                      <div class="radio-custom radio-primary radio-inline">
+                        <input id="request-a-nail-tech-yes" type="radio" name="request-a-nail-tech" />
+                        <label for="request-a-nail-tech-yes"> Yes </label>
+                      </div>
+                      <div class="radio-custom radio-primary radio-inline">
+                        <input id="request-a-nail-tech-no" type="radio" name="request-a-nail-tech" checked />
+                        <label for="request-a-nail-tech-no"> No </label>
+                      </div>
 
+                    </div>
                   </div>
                   <div class="clearfix"></div>
                   <p class="text-center margin-top-50">
@@ -484,105 +491,97 @@
                   </p>
                 </div><!-- End of final step -->
 
-            </form>
+              </form>
+
 
             </div> <!-- End of panel body -->
           </div>
         </div>
 
         <div class="col-xlg-4 col-md-4 col-lg-4">
-          <div class="col-lg-2 col-md-2 col-xlg-2 col-sm-2">
+          <div class="col-lg-2 col-md-2 col-xlg-2 col-sm-2 visible-md visible-lg visible-xlg">
             <div class="bg-white dms-signin-estimate-icon-bg">
               <i class="icon md-time dms-font-size-4em font-weight-300 dms-signin-estimate-icon" aria-hidden="true"></i>
             </div>
           </div>
-          <div class="col-lg-10 col-md-10 col-xlg-10 col-sm-10">
-            <p class="dms-signin-estimate-title font-weight-300 font-size-40 margin-top-10">  Estimate Wait Time</p>
+          <div class="col-lg-10 col-md-12 col-xlg-10 col-sm-12">
+            <p class="dms-signin-estimate-title font-weight-300 margin-top-10">  Estimate Wait Time</p>
           </div>
           <div class="clearfix"></div>
-          <p class="font-size-80 font-weight-300 text-center"> 30 mins</p>
-          <!-- Example Panel With Footer -->
-          <div class="row">
-            <div class="col-md-12 col-lg-12">
-              <div class="panel panel-bordered">
-                <div class="panel-body">
+          <p class="dms-signin-estimate-time font-weight-300 text-center"> 30 mins</p>
+          <div class="clearfix"></div>
 
+          <div class="panel">
+
+              <div class="panel-body">
+                <p class="font-size-30 font-weight-300 text-capitalize padding-bottom-10 dms-signin-title">customer in line</p>
+
+                <div class="table-responsive">
                   <table class="table">
                     <thead>
                     <tr>
                       <th>#</th>
-                      <th>First Name</th>
-                      <th>Last Name</th>
-                      <th>Username</th>
-                      <th>Role</th>
+                      <th>Name</th>
+                      <th>Services</th>
+                      <th>Sign in</th>
+                      <th></th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
                       <td>1</td>
-                      <td>Teagan</td>
-                      <td>Prohaska</td>
-                      <td>@Elijah</td>
-                      <td>
-                        <span class="label label-danger">admin</span>
-                      </td>
+                      <td>Teagan Prohaska</td>
+                      <td><i class="nailsdms-fill-P red-500 font-size-18"></i> <i class="nailsdms-fill-M blue-500 font-size-18"></i> </td>
+                      <td>12:30</td>
+                      <td><button type="button" class="btn btn-icon btn-sm btn-default"><i class="icon md-close"></i> </button> </td>
                     </tr>
                     <tr>
                       <td>2</td>
-                      <td>Andy</td>
-                      <td>Gaylord</td>
-                      <td>@Ramiro</td>
-                      <td>
-                        <span class="label label-info">member</span>
-                      </td>
+                      <td>Andy Gaylord</td>
+                      <td><i class="nailsdms-circle-hand"></i> <i class="nailsdms-circle-face"></i> </td>
+                      <td>12:35</td>
+                      <td><button type="button" class="btn btn-warning">Cancel</button> </td>
                     </tr>
                     <tr>
                       <td>3</td>
-                      <td>Veronica</td>
-                      <td>Gusikowski</td>
-                      <td>@Maxime</td>
-                      <td>
-                        <span class="label label-warning">developer</span>
-                      </td>
+                      <td>Veronica Gusikowski</td>
+                      <td><i class="nailsdms-circle-face"></i> <i class="nailsdms-circle-hand"></i> <i class="nailsdms-circle-feet"></i> </td>
+                      <td>12:40</td>
+                      <td><button type="button" class="btn btn-warning">Cancel</button> </td>
                     </tr>
                     <tr>
                       <td>4</td>
-                      <td>Bruce</td>
-                      <td>Rogahn</td>
-                      <td>@Maggio</td>
-                      <td>
-                        <span class="label label-success">supporter</span>
-                      </td>
+                      <td>Bruce Rogahn</td>
+                      <td><i class="nailsdms-circle-face"></i> <i class="nailsdms-circle-hand"></i> <i class="nailsdms-circle-feet"></i> </td>
+                      <td>12:46</td>
+                      <td><button type="button" class="btn btn-warning">Cancel</button> </td>
                     </tr>
                     <tr>
                       <td>5</td>
-                      <td>Carolina</td>
-                      <td>Hickle</td>
-                      <td>@Hammes</td>
-                      <td>
-                        <span class="label label-info">member</span>
-                      </td>
+                      <td>Carolina Hickle</td>
+                      <td><i class="nailsdms-circle-face"></i> <i class="nailsdms-circle-hand"></i> <i class="nailsdms-circle-feet"></i> </td>
+                      <td>12:48</td>
+                      <td><button type="button" class="btn btn-warning">Cancel</button> </td>
                     </tr>
                     <tr>
                       <td>6</td>
-                      <td>Madaline</td>
-                      <td>Eichmann</td>
-                      <td>@Amaya</td>
-                      <td>
-                        <span class="label label-success">supporter</span>
-                      </td>
+                      <td>Madaline Eichmann</td>
+                      <td><i class="nailsdms-circle-face"></i> <i class="nailsdms-circle-hand"></i> <i class="nailsdms-circle-feet"></i> </td>
+                      <td>12:50</td>
+                      <td><button type="button" class="btn btn-warning">Cancel</button> </td>
                     </tr>
                     </tbody>
                   </table>
                 </div>
-                <div class="panel-footer">Panel Footer</div>
               </div>
-            </div>
           </div>
+          <!-- Use this hidden text to help correct vertical middle alignment -->
+          <p class="font-size-10" style="visibility: hidden;" >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
+
         </div>
+        <div class="clearfix"></div>
 
       </div> <!-- End of main row -->
-      <div class="clearfix"></div>
     </div>
     <!-- End Page Content -->
   </div>
@@ -631,12 +630,12 @@
       console.log("next_step",next_step);
 
 
-      //next_step.addClass('animation-fade');
-      //next_step.removeClass('animation-reverse');
+      next_step.addClass('animation-fade');
+      next_step.removeClass('animation-reverse');
 
       next_step.show();
 
-      //current_step.addClass('animation-reverse animation-fade');
+      current_step.addClass('animation-reverse animation-fade');
       current_step.hide();
 
       //next_step.removeClass('animation-slide-left')
@@ -651,11 +650,11 @@
       console.log("current_step", current_step);
       console.log("previous_step", previous_step);
 
-      //previous_step.addClass('animation-fade');
-     // previous_step.removeClass('animation-reverse');
+      previous_step.addClass('animation-fade');
+      previous_step.removeClass('animation-reverse');
       previous_step.show();
 
-      //current_step.addClass('animation-reverse animation-fade');
+      current_step.addClass('animation-reverse animation-fade');
       current_step.hide();
 
       //previous_step.removeClass('animation-slide-right');

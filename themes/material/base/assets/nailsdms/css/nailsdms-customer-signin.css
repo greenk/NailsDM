@@ -22,6 +22,35 @@ input[type='checkbox'].nailsdms-signin-checkbox + label:before {
     font-size: 5em;
 }
 
+@media only screen and (max-width: 1025px) {
+    input[type='checkbox'].nailsdms-signin-checkbox + label:before {
+        font-size: 4em;
+    }
+}
+
+.dms-signin-estimate-time {
+    font-size: 80px !important;
+}
+
+.dms-signin-estimate-title {
+    text-align: center;
+    font-size: 40px !important;
+}
+
+@media only screen and (max-width: 1025px) {
+    .dms-signin-estimate-time {
+        font-size: 60px !important;
+    }
+
+    .dms-signin-estimate-title {
+        text-align: center;
+        font-size: 30px !important;
+    }
+
+}
+
+
+
 input[type='checkbox'].nailsdms-signin-checkbox + label {
     cursor: pointer;
     font-family: Roboto, sans-serif;
@@ -117,10 +146,10 @@ input[type='checkbox'].nailsdms-signin-checkbox-other + label:before, input[type
     font-size: 4em !important;
 }
 .dms-font-size-5em {
-    font-size: 4em !important;
+    font-size: 5em !important;
 }
 .dms-font-size-6em {
-    font-size: 4em !important;
+    font-size: 6em !important;
 }
 
 .dms-signin-border-left {
