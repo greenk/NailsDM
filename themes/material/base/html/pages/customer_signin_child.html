@@ -68,29 +68,29 @@
               <form action="#" method="get" >
 
                 <!-- Start Step 1 -->
-                <div id="dms-signin-step-1" class="dms-signin-step ">
+                <div class="dms-signin-step ">
                   <p class="font-size-40 font-weight-300 text-capitalize margin-bottom-20 dms-signin-title">sign in</p>
                   <div class="row">
                     <div class="col-lg-5 col-md-5">
 
                       <div class="form-group form-material floating">
-                        <input class="form-control input-lg" name="customer_firstname" type="text" tabindex="1"/>
+                        <input class="form-control input-lg" name="customer_firstname_child" type="text" tabindex="1"/>
                         <label class="floating-label"><i class="icon md-account" aria-hidden="true"></i> &nbsp; First Name</label>
                       </div>
                       <div class="form-group form-material floating">
-                        <input class="form-control input-lg" name="customer_phonenumber" type="text" tabindex="3"/>
-                        <label class="floating-label"><i class="icon md-phone"></i> &nbsp; Phone Number</label>
+                        <input class="form-control input-lg" name="customer_phonenumber_child" type="text" tabindex="3"/>
+                        <label class="floating-label"><i class="icon md-phone"></i> &nbsp; Parent's Phone Number</label>
                       </div>
                     </div>
 
                     <div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5">
                       <div class="form-group form-material floating">
-                        <input class="form-control input-lg" name="customer_lastname" type="text" tabindex="2"/>
+                        <input class="form-control input-lg" name="customer_lastname_child" type="text" tabindex="2"/>
                         <label class="floating-label"> <i class="icon md-account" aria-hidden="true"></i> &nbsp; Last Name</label>
                       </div>
                       <div class="form-group form-material floating">
-                        <input class="form-control input-lg" name="customer_email" type="text" tabindex="4"/>
-                        <label class="floating-label"><i class="icon md-email" aria-hidden="true"></i> &nbsp; Email</label>
+                        <input class="form-control input-lg" name="customer_email_child" type="text" tabindex="4"/>
+                        <label class="floating-label"><i class="icon md-email" aria-hidden="true"></i> &nbsp; Parent's Email</label>
                       </div>
                     </div>
                   </div>
@@ -108,10 +108,6 @@
                       <input type='checkbox' id='nailsdms-signin-checkbox-feet' name="signin-select-services" class='nailsdms-signin-checkbox nailsdms-signin-checkbox-feet sr-only'/>
                       <label for='nailsdms-signin-checkbox-feet' class='block text-center'> <p></p>Feet </label>
                     </li>
-                    <li>
-                      <input type='checkbox' id='nailsdms-signin-checkbox-waxing' name="signin-select-services" class='nailsdms-signin-checkbox nailsdms-signin-checkbox-waxing sr-only'/>
-                      <label for='nailsdms-signin-checkbox-waxing' class='block text-center'> <p></p> Waxing </label>
-                    </li>
 
                     <li>
                       <input type='checkbox' id='nailsdms-signin-checkbox-other' name="signin-select-services" class='nailsdms-signin-checkbox nailsdms-signin-checkbox-other sr-only'/>
@@ -121,13 +117,13 @@
                   </ul>
                   <p class="text-center margin-top-50">
                     <button class="btn btn-primary btn-lg dms-signin-next" type="button"> Next </button>
-                    <p class="font-size-14 text-center"><a href="customer_signin_child.html"> Sign In For Kid</a></p>
+                    <p class="font-size-14 text-center"><a href="customer_signin.html"> Sign In For Adult</a></p>
                   </p>
                 </div> <!-- End of Step 1 -->
 
                 <!-- Start Step 2 -->
-                <div id="dms-signin-step-2" class="dms-signin-step" style="display: none;">
-                  <p class="font-size-30 font-weight-300 text-capitalize margin-bottom-20 dms-signin-title">Hand Services</p>
+                <div class="dms-signin-step" style="display: none;">
+                  <p class="font-size-30 font-weight-300 text-capitalize margin-bottom-20 dms-signin-title">Hand Services - <i class="icon md-face" aria-hidden="true"></i> Kid  </p>
                   <div class="row">
                     <div class="col-md-2 col-lg-2 col-xlg-2 text-center">
                       <i class="nailsdms-circle-hand block dms-font-size-4em"></i>
@@ -142,21 +138,21 @@
                         <div>
                           <div class="radio-custom radio-primary">
                             <input id="regular-manicure" type="radio" name="hand-select-type" />
-                            <label for="regular-manicure" class="dms-signin-addon-label text-capitalize"> Manicure $15</label>
+                            <label for="regular-manicure" class="dms-signin-addon-label text-capitalize"> Manicure $12</label>
                             <div class="font-size-14">
                               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                             </div>
                           </div>
                           <div class="radio-custom radio-primary">
                             <input id="signature-manicure" type="radio" name="hand-select-type" />
-                            <label for="signature-manicure" class="dms-signin-addon-label text-capitalize">  Signature Manicure $25</label>
+                            <label for="signature-manicure" class="dms-signin-addon-label text-capitalize">  Signature Manicure $22</label>
                             <div class="font-size-14">
                               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                             </div>
                           </div>
                           <div class="radio-custom radio-primary">
                             <input id="deluxe-manicure" type="radio" name="hand-select-type" />
-                            <label for="deluxe-manicure" class="dms-signin-addon-label text-capitalize">  Deluxe Manicure $25</label>
+                            <label for="deluxe-manicure" class="dms-signin-addon-label text-capitalize">  Deluxe Manicure $22</label>
                             <div class="font-size-14">
                               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
                             </div>
@@ -296,8 +292,8 @@
                 </div> <!-- End of Step 2-->
 
                 <!-- Start Step 3 -->
-                <div id="dms-signin-step-3" class="dms-signin-step" style="display: none;">
-                  <p class="font-size-30 font-weight-300 text-capitalize margin-bottom-20 dms-signin-title">Feet Services</p>
+                <div class="dms-signin-step" style="display: none;">
+                  <p class="font-size-30 font-weight-300 text-capitalize margin-bottom-20 dms-signin-title">Feet Services - <i class="icon md-face" aria-hidden="true"></i> Kid </p>
                   <div class="row">
                     <div class="col-md-2 col-lg-2 col-xlg-2 text-center">
                       <i class="nailsdms-circle-feet block dms-font-size-4em"></i>
@@ -466,101 +462,28 @@
                   </p>
                 </div> <!-- End of Step 3-->
 
-                <!-- Start Step 4 -->
-                <div id="dms-signin-step-4" class="dms-signin-step" style="display: none;">
-                  <p class="font-size-30 font-weight-300 text-capitalize margin-bottom-20 dms-signin-title">Waxing Services</p>
-                  <div class="row">
-                    <div class="col-md-2 col-lg-2 col-xlg-2 text-center">
-                      <i class="nailsdms-circle-face block dms-font-size-4em"></i>
-                      <p class="text-center">Waxing</p>
-
-                    </div>
-                    <div class="col-md-10 col-lg-10 col-xlg-10 dms-signin-border-left ">
-                      <div class="checkbox-custom checkbox-primary">
-                        <input id="eyebrown-waxing" type="checkbox" name="waxing-type" />
-                        <label for="eyebrown-waxing" class="dms-signin-addon-label text-capitalize"> Eyebrown Waxing $12</label>
-                        <div class="font-size-14">
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        </div>
-                      </div>
-                      <div class="checkbox-custom checkbox-primary">
-                        <input id="chin-waxing" type="checkbox" name="waxing-type" />
-                        <label for="chin-waxing" class="dms-signin-addon-label text-capitalize"> Chin Waxing $10</label>
-                        <div class="font-size-14">
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="clearfix"></div>
-
-                  <p class="text-center margin-top-50">
-                    <button class="btn btn-warning btn-lg dms-signin-back" type="button"> Back </button> <button class="btn btn-primary btn-lg dms-signin-next" type="button"> Next </button>
-                  </p>
-                </div> <!-- End of Step 4-->
 
                 <!-- Start of final step -->
-                <div id="dms-signin-step-final" id="dms-signin-final-step" class="dms-signin-step" style="display: none;" >
+                <div id="dms-signin-final-step" class="dms-signin-step" style="display: none;" >
                   <div class="row">
                     <div class="col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10 text-center margin-top-30">
                       <h1 class="font-size-50 font-weight-300 dms-signin-title"> Thank you</h1>
                       <p class="font-size-26">Do you request for a specific nail text</p>
                       <div class="radio-custom radio-primary radio-inline">
-                        <input id="request-a-nail-tech-yes" type="radio" name="request-a-nail-tech" value="yes" />
+                        <input id="request-a-nail-tech-yes" type="radio" name="request-a-nail-tech" />
                         <label for="request-a-nail-tech-yes"> Yes </label>
                       </div>
                       <div class="radio-custom radio-primary radio-inline">
-                        <input id="request-a-nail-tech-no" type="radio" name="request-a-nail-tech" checked value="no" />
+                        <input id="request-a-nail-tech-no" type="radio" name="request-a-nail-tech" checked />
                         <label for="request-a-nail-tech-no"> No </label>
-                      </div>
-                      <div class="clearfix"></div>
-
-                      <div class="dms-request-nail-tech margin-top-20" style="display: none;">
-                        <table class="table table-hover font-size-16" data-selectable="selectable" data-row-selectable="true">
-                          <thead>
-                            <tr>
-                              <th class="bs-checkbox width-50"></th>
-                              <th class="text-center">Nail Tech</th>
-                              <th class="text-center">Status</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                          <tr>
-                            <td class="bs-checkbox">
-                              <input data-index="0" name="select-nail-tech" type="radio"/>
-                            </td>
-                            <td> Christina </td>
-                            <td><span class="label label-danger">Working</span></td>
-                          </tr>
-                          <tr data-index="1">
-                            <td class="bs-checkbox">
-                              <input data-index="1" name="select-nail-tech" type="radio"/>
-                            </td>
-                            <td> Ben </td>
-                            <td><span class="label label-info">Available</span></td>
-                          </tr>
-                          <tr data-index="2">
-                            <td class="bs-checkbox">
-                              <input data-index="2" name="select-nail-tech" type="radio"/>
-                            </td>
-                            <td> Amber </td>
-                            <td><span class="label label-info">Available</span></td>
-                          </tr>
-                          <tr data-index="3">
-                            <td class="bs-checkbox">
-                              <input data-index="3" name="select-nail-tech" type="radio"/>
-                            </td>
-                            <td> Anthony </td>
-                            <td><span class="label label-danger">Working</span></td>
-                          </tr>
-
-                          </tbody>
-                        </table>
-
                       </div>
 
                     </div>
+
+
+
                   </div>
+
                   <div class="clearfix"></div>
                   <p class="text-center margin-top-50">
                     <button class="btn btn-warning btn-lg dms-signin-back" type="button"> Back </button> <button type="submit" class="btn btn-primary btn-lg dms-signin-next"> I am READY </button>
@@ -690,26 +613,35 @@
   <script>
     ///
     var current_step, next_step, previous_step;
-    var selected_services = [];
 
     $(".dms-signin-next").click(function(){
-
       current_step = $(this).parent().parent();
+
+      console.log("current_step", current_step);
       next_step = $(this).parent().parent().next();
+
+      console.log("next_step",next_step);
+
 
       next_step.addClass('animation-fade');
       next_step.removeClass('animation-reverse');
+
       next_step.show();
 
       current_step.addClass('animation-reverse animation-fade');
       current_step.hide();
 
+      //next_step.removeClass('animation-slide-left')
+
+
     });
 
     $(".dms-signin-back").click(function(){
-
       current_step = $(this).parent().parent();
       previous_step = $(this).parent().parent().prev();
+
+      console.log("current_step", current_step);
+      console.log("previous_step", previous_step);
 
       previous_step.addClass('animation-fade');
       previous_step.removeClass('animation-reverse');
@@ -718,28 +650,11 @@
       current_step.addClass('animation-reverse animation-fade');
       current_step.hide();
 
-    });
+      //previous_step.removeClass('animation-slide-right');
 
-    /**
-     * User click on specific nail tech
-     * Yes: show employee table
-     * No: hide employee table
-     * Default: Hide employee table
-     */
-    $('input[type=radio][name=request-a-nail-tech]').on('change', function(){
 
-      switch($(this).val()) {
-        case 'yes':
-              $('.dms-request-nail-tech').removeClass('animation-reverse');
-              $('.dms-request-nail-tech').addClass('animation-fade');
-              $('.dms-request-nail-tech').show();
-              break;
-        case 'no':
-              $('.dms-request-nail-tech').addClass('animation-reverse animation-fade');
-              $('.dms-request-nail-tech').hide();
-              break;
-      }
     });
+    //*/
 
     window.Site = Site.extend({
       run: function(next) {
