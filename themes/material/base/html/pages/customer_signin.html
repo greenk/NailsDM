@@ -717,27 +717,28 @@
 
     $(".dms-signin-next").click(function(){
 
-        current_service = tracing_selected_services.shift();
-        switch (current_service) {
-          case 'hand':
-            current_step = $('#dms-signin-step-hand');
-            break;
-          case 'feet':
-            current_step = $('#dms-signin-step-feet');
-            break;
-          case 'waxing':
-            current_step = $('#dms-signin-step-waxing');
-            break;
-          case 'signin':
-            current_step = $('#dms-signin-step-signin');
-            break;
-          case 'final':
-            current_step = $('#dms-signin-step-final');
-            break;
-          default :
-                current_step = $('#dms-signin-step-signin');
-        }
 
+      current_service = tracing_selected_services.shift();
+      switch (current_service) {
+        case 'hand':
+          current_step = $('#dms-signin-step-hand');
+          break;
+        case 'feet':
+          current_step = $('#dms-signin-step-feet');
+          break;
+        case 'waxing':
+          current_step = $('#dms-signin-step-waxing');
+          break;
+        case 'signin':
+          current_step = $('#dms-signin-step-signin');
+          break;
+        case 'final':
+          current_step = $('#dms-signin-step-final');
+          break;
+        default :
+          current_step = $('#dms-signin-step-signin');
+      }
+      tracing_selected_services.unshift(current_service);
       //current_step = $(this).parent().parent();
       //next_step = $(this).parent().parent().next();
 
@@ -762,8 +763,12 @@
       }
       tracing_selected_services.unshift(next_service);
 
-
-
+      console.log("current_step", current_step);
+      console.log("next_step", next_step);
+      console.log("current_service", current_service);
+      console.log("next_service", next_service);
+      console.log("Current selected_services: " + selected_services.join(", "));
+      console.log("Current tracing_selected_services: " + tracing_selected_services.join(", "));
 
       next_step.addClass('animation-fade');
       next_step.removeClass('animation-reverse');
@@ -784,30 +789,7 @@
       //current_step = $(this).parent().parent();
       //next_step = $(this).parent().parent().next();
 
-      previous_service = tracing_selected_services[1];
-      console.log("previous_service", previous_service);
-      switch (previous_service) {
-        case 'hand':
-          previous_step = $('#dms-signin-step-hand');
-          break;
-        case 'feet':
-          previous_step = $('#dms-signin-step-feet');
-          break;
-        case 'waxing':
-          previous_step = $('#dms-signin-step-waxing');
-          break;
-        case 'signin':
-          previous_step = $('#dms-signin-step-signin');
-          break;
-        case 'final':
-          previous_step = $('#dms-signin-step-final');
-        default :
-          previous_step = $('#dms-signin-step-signin');
-      }
       current_service = tracing_selected_services.shift();
-      console.log("previous_step", previous_step);
-      //current_service = selected_services[0];
-      console.log("current_service", current_service);
       switch (current_service) {
         case 'hand':
           current_step = $('#dms-signin-step-hand');
@@ -826,8 +808,35 @@
         default :
           current_step = $('#dms-signin-step-final');
       }
-      console.log("current_step", current_step);
+
+      previous_service = tracing_selected_services.shift();
+      tracing_selected_services.unshift(previous_service);
+      switch (previous_service) {
+        case 'hand':
+          previous_step = $('#dms-signin-step-hand');
+          break;
+        case 'feet':
+          previous_step = $('#dms-signin-step-feet');
+          break;
+        case 'waxing':
+          previous_step = $('#dms-signin-step-waxing');
+          break;
+        case 'signin':
+          previous_step = $('#dms-signin-step-signin');
+          break;
+        case 'final':
+          previous_step = $('#dms-signin-step-final');
+        default :
+          previous_step = $('#dms-signin-step-signin');
+      }
       selected_services.unshift(current_service);
+
+      console.log("current_step", current_step);
+      console.log("previous_step", previous_step);
+      console.log("current_service", current_service);
+      console.log("previous_service", previous_service);
+      console.log("Current selected_services: " + selected_services.join(", "));
+      console.log("Current tracing_selected_services: " + tracing_selected_services.join(", "));
 
       previous_step.addClass('animation-fade');
       previous_step.removeClass('animation-reverse');
