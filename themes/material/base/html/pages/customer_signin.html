@@ -68,7 +68,7 @@
               <form action="#" method="get" >
 
                 <!-- Start Step 1 -->
-                <div id="dms-signin-step-1" class="dms-signin-step ">
+                <div id="dms-signin-step-signin" class="dms-signin-step ">
                   <p class="font-size-40 font-weight-300 text-capitalize margin-bottom-20 dms-signin-title">sign in</p>
                   <div class="row">
                     <div class="col-lg-5 col-md-5">
@@ -101,20 +101,20 @@
                   <ul class="list-inline text-center margin-top-10 nailsdms-signin-select-service">
 
                     <li>
-                      <input type='checkbox' id='nailsdms-signin-checkbox-hand' name="signin-select-services" class='nailsdms-signin-checkbox nailsdms-signin-checkbox-hand sr-only'/>
+                      <input type='checkbox' value="hand" id='nailsdms-signin-checkbox-hand' name="signin-select-services" class='nailsdms-signin-checkbox nailsdms-signin-checkbox-hand sr-only'/>
                       <label for='nailsdms-signin-checkbox-hand' class='block text-center'> <p></p>Hand </label>
                     </li>
                     <li>
-                      <input type='checkbox' id='nailsdms-signin-checkbox-feet' name="signin-select-services" class='nailsdms-signin-checkbox nailsdms-signin-checkbox-feet sr-only'/>
+                      <input type='checkbox' value="feet" id='nailsdms-signin-checkbox-feet' name="signin-select-services" class='nailsdms-signin-checkbox nailsdms-signin-checkbox-feet sr-only'/>
                       <label for='nailsdms-signin-checkbox-feet' class='block text-center'> <p></p>Feet </label>
                     </li>
                     <li>
-                      <input type='checkbox' id='nailsdms-signin-checkbox-waxing' name="signin-select-services" class='nailsdms-signin-checkbox nailsdms-signin-checkbox-waxing sr-only'/>
+                      <input type='checkbox' value="waxing" id='nailsdms-signin-checkbox-waxing' name="signin-select-services" class='nailsdms-signin-checkbox nailsdms-signin-checkbox-waxing sr-only'/>
                       <label for='nailsdms-signin-checkbox-waxing' class='block text-center'> <p></p> Waxing </label>
                     </li>
 
                     <li>
-                      <input type='checkbox' id='nailsdms-signin-checkbox-other' name="signin-select-services" class='nailsdms-signin-checkbox nailsdms-signin-checkbox-other sr-only'/>
+                      <input type='checkbox' value="other" id='nailsdms-signin-checkbox-other' name="signin-select-services" class='nailsdms-signin-checkbox nailsdms-signin-checkbox-other sr-only'/>
                       <label for='nailsdms-signin-checkbox-other' class='block text-center'> <p></p> Other </label>
                     </li>
 
@@ -126,7 +126,7 @@
                 </div> <!-- End of Step 1 -->
 
                 <!-- Start Step 2 -->
-                <div id="dms-signin-step-2" class="dms-signin-step" style="display: none;">
+                <div id="dms-signin-step-hand" class="dms-signin-step" style="display: none;">
                   <p class="font-size-30 font-weight-300 text-capitalize margin-bottom-20 dms-signin-title">Hand Services</p>
                   <div class="row">
                     <div class="col-md-2 col-lg-2 col-xlg-2 text-center">
@@ -296,7 +296,7 @@
                 </div> <!-- End of Step 2-->
 
                 <!-- Start Step 3 -->
-                <div id="dms-signin-step-3" class="dms-signin-step" style="display: none;">
+                <div id="dms-signin-step-feet" class="dms-signin-step" style="display: none;">
                   <p class="font-size-30 font-weight-300 text-capitalize margin-bottom-20 dms-signin-title">Feet Services</p>
                   <div class="row">
                     <div class="col-md-2 col-lg-2 col-xlg-2 text-center">
@@ -467,7 +467,7 @@
                 </div> <!-- End of Step 3-->
 
                 <!-- Start Step 4 -->
-                <div id="dms-signin-step-4" class="dms-signin-step" style="display: none;">
+                <div id="dms-signin-step-waxing" class="dms-signin-step" style="display: none;">
                   <p class="font-size-30 font-weight-300 text-capitalize margin-bottom-20 dms-signin-title">Waxing Services</p>
                   <div class="row">
                     <div class="col-md-2 col-lg-2 col-xlg-2 text-center">
@@ -691,11 +691,79 @@
     ///
     var current_step, next_step, previous_step;
     var selected_services = [];
+    var tracing_selected_services = [];
+
+    var next_service, current_service, previous_service;
+
+    /**
+     * For each checked service we push it in our selected_services array
+     */
+    $('#dms-signin-step-signin .dms-signin-next').on('click', function(){
+      //clear whatever service in array
+      selected_services = [];
+      tracing_selected_services = [];
+
+      tracing_selected_services.push('signin');
+      //fill it in with checked services
+      $.each($("input[name='signin-select-services']:checked"), function(){
+        selected_services.push($(this).val());
+      });
+
+      //add final step
+      selected_services.push('final');
+
+      console.log("You selected: " + selected_services.join(", "));
+    });
 
     $(".dms-signin-next").click(function(){
 
-      current_step = $(this).parent().parent();
-      next_step = $(this).parent().parent().next();
+        current_service = tracing_selected_services.shift();
+        switch (current_service) {
+          case 'hand':
+            current_step = $('#dms-signin-step-hand');
+            break;
+          case 'feet':
+            current_step = $('#dms-signin-step-feet');
+            break;
+          case 'waxing':
+            current_step = $('#dms-signin-step-waxing');
+            break;
+          case 'signin':
+            current_step = $('#dms-signin-step-signin');
+            break;
+          case 'final':
+            current_step = $('#dms-signin-step-final');
+            break;
+          default :
+                current_step = $('#dms-signin-step-signin');
+        }
+
+      //current_step = $(this).parent().parent();
+      //next_step = $(this).parent().parent().next();
+
+      next_service = selected_services.shift();
+      switch (next_service) {
+        case 'hand':
+          next_step = $('#dms-signin-step-hand');
+          break;
+        case 'feet':
+          next_step = $('#dms-signin-step-feet');
+          break;
+        case 'waxing':
+          next_step = $('#dms-signin-step-waxing');
+          break;
+        case 'signin':
+          next_step = $('#dms-signin-step-signin');
+          break;
+        case 'final':
+          next_step = $('#dms-signin-step-final');
+        default :
+          next_step = $('#dms-signin-step-final');
+      }
+      tracing_selected_services.unshift(next_service);
+
+
+
 
       next_step.addClass('animation-fade');
       next_step.removeClass('animation-reverse');
@@ -708,8 +776,58 @@
 
     $(".dms-signin-back").click(function(){
 
-      current_step = $(this).parent().parent();
-      previous_step = $(this).parent().parent().prev();
+      //current_step = $(this).parent().parent();
+      //previous_step = $(this).parent().parent().prev();
+
+
+
+      //current_step = $(this).parent().parent();
+      //next_step = $(this).parent().parent().next();
+
+      previous_service = tracing_selected_services[1];
+      console.log("previous_service", previous_service);
+      switch (previous_service) {
+        case 'hand':
+          previous_step = $('#dms-signin-step-hand');
+          break;
+        case 'feet':
+          previous_step = $('#dms-signin-step-feet');
+          break;
+        case 'waxing':
+          previous_step = $('#dms-signin-step-waxing');
+          break;
+        case 'signin':
+          previous_step = $('#dms-signin-step-signin');
+          break;
+        case 'final':
+          previous_step = $('#dms-signin-step-final');
+        default :
+          previous_step = $('#dms-signin-step-signin');
+      }
+      current_service = tracing_selected_services.shift();
+      console.log("previous_step", previous_step);
+      //current_service = selected_services[0];
+      console.log("current_service", current_service);
+      switch (current_service) {
+        case 'hand':
+          current_step = $('#dms-signin-step-hand');
+          break;
+        case 'feet':
+          current_step = $('#dms-signin-step-feet');
+          break;
+        case 'waxing':
+          current_step = $('#dms-signin-step-waxing');
+          break;
+        case 'signin':
+          current_step = $('#dms-signin-step-signin');
+          break;
+        case 'final':
+          current_step = $('#dms-signin-step-final');
+        default :
+          current_step = $('#dms-signin-step-final');
+      }
+      console.log("current_step", current_step);
+      selected_services.unshift(current_service);
 
       previous_step.addClass('animation-fade');
       previous_step.removeClass('animation-reverse');
