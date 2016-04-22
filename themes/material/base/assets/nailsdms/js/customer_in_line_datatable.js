@@ -44,11 +44,12 @@ var CustomerInLineTable = {
                             customer_name: "firstname lastname",
                             service_type: ["icon service type", "icon service type"],
                             sign_in: "hh:mm"
+                            cancel_button: "<a class="btn btn-icon btn-sm btn-default"><i class="icon md-close"></i> </a>"
                         },...
                        ]
                      */
 
-                    var customer_service_arr = [];
+                    var customer_inline_arr = [];
                     var customer_obj;
 
                     var obj_count = json.length;
@@ -56,7 +57,7 @@ var CustomerInLineTable = {
 
                     for (var i = 0; i < obj_count; i++){
                         cobj_id = json[i].id;
-                        cobj_name = json[i].c_firstname + json[i].c_lastname;
+                        cobj_name = json[i].c_firstname + " " + json[i].c_lastname;
 
                         cobj_service_type = [];
                         track_cobj_service_type = [];
@@ -64,6 +65,7 @@ var CustomerInLineTable = {
                         earliest_date = new Date();
                         earliest_customer_time = '';
                         temp_date = '';
+                        c_cancel_button = '';
 
                         var work_count = json[i].work_tb.length;
                         for (var ii = 0; ii < work_count; ii++){
@@ -98,36 +100,32 @@ var CustomerInLineTable = {
 
                             // process to get earliest time
                             temp_date = new Date(json[i].work_tb[ii].work_created_date);
-                            temp_date = new Date('2016-04-21 10:30:10');
-                            console.log('work_created_date', json[i].work_tb[ii].work_created_date);
-                            console.log("temp_date", temp_date);
-
                             if (earliest_date > temp_date) {
                                 earliest_date = temp_date;
-                                console.log('earliest_date', earliest_date);
                             }
                         }
                         earliest_customer_time = earliest_date.getHours() + ":" + earliest_date.getMinutes();
 
+                        c_cancel_button = "<a class='cancel-service btn btn-icon btn-sm btn-default' " + "data-dmsCustomerId=" + json[i].id +  "><i class='icon md-close'></i> </a>";
                         // Create an object and push it to customer_service_arr
                         var cobj = {
                             id: cobj_id,
                             customer_name: cobj_name,
                             service_type: cobj_service_type,
                             sign_in: earliest_customer_time,
+                            cancel_button: c_cancel_button,
                         };
-
-                        customer_service_arr.push(cobj);
-
+                        customer_inline_arr.push(cobj);
                     }
-                    return customer_service_arr;
+                    return customer_inline_arr;
 
                 }
             },
             columns: [
                 { "data": "customer_name"},
                 { "data": "service_type[ ]"},
-                { "data": "sign_in"}
+                { "data": "sign_in"},
+                { "data": "cancel_button"}
             ],
             language: {
                 "sSearchPlaceholder": "Search..",

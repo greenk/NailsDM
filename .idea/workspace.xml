@@ -22,12 +22,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="customer_signin.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="customer_signin.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/material/base/html/pages/customer_signin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="84" column="95" selection-start-line="84" selection-start-column="89" selection-end-line="84" selection-end-column="99" />
+            <state relative-caret-position="-154">
+              <caret line="596" column="38" selection-start-line="596" selection-start-column="38" selection-end-line="596" selection-end-column="38" />
               <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#2;n#div#1;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -39,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="customer_in_line_datatable.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="customer_in_line_datatable.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themes/material/base/assets/nailsdms/js/customer_in_line_datatable.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="100" column="72" selection-start-line="100" selection-start-column="72" selection-end-line="100" selection-end-column="72" />
+            <state relative-caret-position="-476">
+              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -81,8 +82,8 @@
       <file leaf-file-name="customer_in_line.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/material/base/assets/data/customer_in_line.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="222" column="33" selection-start-line="0" selection-start-column="0" selection-end-line="257" selection-end-column="1" />
+            <state relative-caret-position="731">
+              <caret line="250" column="34" selection-start-line="250" selection-start-column="34" selection-end-line="250" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -91,8 +92,8 @@
       <file leaf-file-name="customer_in_line.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/material/base/assets/nailsdms/js/customer_in_line.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="859">
-              <caret line="257" column="1" selection-start-line="257" selection-start-column="1" selection-end-line="257" selection-end-column="1" />
+            <state relative-caret-position="-229">
+              <caret line="195" column="41" selection-start-line="195" selection-start-column="41" selection-end-line="195" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -132,11 +133,11 @@
         <option value="$PROJECT_DIR$/themes/material/base/assets/nailsdms/nailsdms-fonts/nailsdms-icon.css" />
         <option value="$PROJECT_DIR$/themes/material/base/assets/nailsdms/css/nailsdms-customer-signin.css" />
         <option value="$PROJECT_DIR$/themes/material/base/html/pages/customer_signin_child.html" />
-        <option value="$PROJECT_DIR$/themes/material/base/assets/data/customer_in_line.json" />
         <option value="$PROJECT_DIR$/themes/material/base/assets/data/employee_status.json" />
-        <option value="$PROJECT_DIR$/themes/material/base/assets/nailsdms/js/customer_in_line.json" />
-        <option value="$PROJECT_DIR$/themes/material/base/assets/nailsdms/js/customer_in_line_datatable.js" />
         <option value="$PROJECT_DIR$/themes/material/base/html/pages/customer_signin.html" />
+        <option value="$PROJECT_DIR$/themes/material/base/assets/nailsdms/js/customer_in_line.json" />
+        <option value="$PROJECT_DIR$/themes/material/base/assets/data/customer_in_line.json" />
+        <option value="$PROJECT_DIR$/themes/material/base/assets/nailsdms/js/customer_in_line_datatable.js" />
       </list>
     </option>
   </component>
@@ -719,12 +720,12 @@
       <workItem from="1459524359604" duration="14312000" />
       <workItem from="1460057688131" duration="5686000" />
       <workItem from="1461180955107" duration="2946000" />
-      <workItem from="1461334584925" duration="13726000" />
+      <workItem from="1461334584925" duration="17386000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36670000" />
+    <option name="totallyTimeSpent" value="40330000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1172,35 +1173,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/material/base/assets/data/customer_in_line.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="222" column="33" selection-start-line="0" selection-start-column="0" selection-end-line="257" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/material/base/assets/nailsdms/js/customer_in_line.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="859">
-          <caret line="257" column="1" selection-start-line="257" selection-start-column="1" selection-end-line="257" selection-end-column="1" />
+        <state relative-caret-position="-229">
+          <caret line="195" column="41" selection-start-line="195" selection-start-column="41" selection-end-line="195" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/material/base/assets/nailsdms/js/customer_in_line_datatable.js">
+    <entry file="file://$PROJECT_DIR$/themes/material/base/assets/data/customer_in_line.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="100" column="72" selection-start-line="100" selection-start-column="72" selection-end-line="100" selection-end-column="72" />
+        <state relative-caret-position="731">
+          <caret line="250" column="34" selection-start-line="250" selection-start-column="34" selection-end-line="250" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/material/base/html/pages/customer_signin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="84" column="95" selection-start-line="84" selection-start-column="89" selection-end-line="84" selection-end-column="99" />
+        <state relative-caret-position="-154">
+          <caret line="596" column="38" selection-start-line="596" selection-start-column="38" selection-end-line="596" selection-end-column="38" />
           <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#div#1;n#div#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1208,6 +1202,14 @@
             <element signature="n#div#3;n#div#0;n#div#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#table#0;n#div#3;n#div#0;n#div#0;n#div#4;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/material/base/assets/nailsdms/js/customer_in_line_datatable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-476">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

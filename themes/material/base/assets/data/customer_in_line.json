@@ -8,7 +8,7 @@
     "work_tb":[
       {
         "id": "1",
-        "work_created_date": "2016-04-21 10:30:10",
+        "work_created_date": "2016-04-21T10:30:10",
         "work_started_date": null,
         "work_finished_date": null,
         "work_status": "waiting",
@@ -23,7 +23,7 @@
       },
       {
         "id": "2",
-        "work_created_date": "2016-04-21 10:30:10",
+        "work_created_date": "2016-04-21T10:30:10",
         "work_started_date": null,
         "work_finished_date": null,
         "work_status": "waiting",
@@ -47,7 +47,7 @@
     "work_tb":[
       {
         "id": "3",
-        "work_created_date": "2016-04-21 10:31:00",
+        "work_created_date": "2016-04-21T10:31:00",
         "work_started_date": null,
         "work_finished_date": null,
         "work_status": "waiting",
@@ -62,7 +62,7 @@
       },
       {
         "id": "4",
-        "work_created_date": "2016-04-21 10:31:00",
+        "work_created_date": "2016-04-21T10:31:00",
         "work_started_date": null,
         "work_finished_date": null,
         "work_status": "waiting",
@@ -77,7 +77,7 @@
       },
       {
         "id": "5",
-        "work_created_date": "2016-04-21 10:31:00",
+        "work_created_date": "2016-04-21T10:31:00",
         "work_started_date": null,
         "work_finished_date": null,
         "work_status": "waiting",
@@ -101,7 +101,7 @@
     "work_tb":[
       {
         "id": "6",
-        "work_created_date": "2016-04-21 10:32:00",
+        "work_created_date": "2016-04-21T10:32:00",
         "work_started_date": null,
         "work_finished_date": null,
         "work_status": "waiting",
@@ -116,7 +116,7 @@
       },
       {
         "id": "7",
-        "work_created_date": "2016-04-21 10:32:00",
+        "work_created_date": "2016-04-21T10:32:00",
         "work_started_date": null,
         "work_finished_date": null,
         "work_status": "waiting",
@@ -131,7 +131,7 @@
       },
       {
         "id": "8",
-        "work_created_date": "2016-04-21 10:32:00",
+        "work_created_date": "2016-04-21T10:32:00",
         "work_started_date": null,
         "work_finished_date": null,
         "work_status": "waiting",
@@ -155,7 +155,7 @@
     "work_tb":[
       {
         "id": "9",
-        "work_created_date": "2016-04-21 10:34:00",
+        "work_created_date": "2016-04-21T10:34:00",
         "work_started_date": null,
         "work_finished_date": null,
         "work_status": "waiting",
@@ -170,7 +170,7 @@
       },
       {
         "id": "10",
-        "work_created_date": "2016-04-21 10:34:00",
+        "work_created_date": "2016-04-21T10:34:00",
         "work_started_date": null,
         "work_finished_date": null,
         "work_status": "waiting",
@@ -193,7 +193,7 @@
       },
       {
         "id": "11",
-        "work_created_date": "2016-04-21 10:34:00",
+        "work_created_date": "2016-04-21T10:34:00",
         "work_started_date": null,
         "work_finished_date": null,
         "work_status": "waiting",
@@ -217,7 +217,7 @@
     "work_tb":[
       {
         "id": "12",
-        "work_created_date": "2016-04-21 10:35:00",
+        "work_created_date": "2016-04-21T10:35:00",
         "work_started_date": null,
         "work_finished_date": null,
         "work_status": "waiting",
@@ -240,7 +240,7 @@
       },
       {
         "id": "13",
-        "work_created_date": "2016-04-21 10:35:00",
+        "work_created_date": "2016-04-21T10:35:00",
         "work_started_date": null,
         "work_finished_date": null,
         "work_status": "waiting",
