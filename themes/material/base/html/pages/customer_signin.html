@@ -26,6 +26,10 @@
   <link rel="stylesheet" href="../../../global/vendor/flag-icon-css/flag-icon.css">
   <link rel="stylesheet" href="../../../global/vendor/waves/waves.css">
 
+  <link rel="stylesheet" href="../../../global/vendor/datatables-bootstrap/dataTables.bootstrap.css">
+  <link rel="stylesheet" href="../../../global/vendor/datatables-fixedheader/dataTables.fixedHeader.css">
+  <link rel="stylesheet" href="../../../global/vendor/datatables-responsive/dataTables.responsive.css">
+
 
   <!-- Fonts -->
   <link rel="stylesheet" href="../../../global/fonts/material-design/material-design.min.css">
@@ -78,7 +82,7 @@
                         <label class="floating-label"><i class="icon md-account" aria-hidden="true"></i> &nbsp; First Name</label>
                       </div>
                       <div class="form-group form-material floating">
-                        <input class="form-control input-lg" name="customer_phonenumber" type="text" tabindex="3"/>
+                        <input class="form-control input-lg" name="customer_phonenumber" type="tel" tabindex="3"/>
                         <label class="floating-label"><i class="icon md-phone"></i> &nbsp; Phone Number</label>
                       </div>
                     </div>
@@ -500,7 +504,7 @@
                 </div> <!-- End of Step 4-->
 
                 <!-- Start of final step -->
-                <div id="dms-signin-step-final" id="dms-signin-final-step" class="dms-signin-step" style="display: none;" >
+                <div id="dms-signin-step-final" class="dms-signin-step" style="display: none;" >
                   <div class="row">
                     <div class="col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10 text-center margin-top-30">
                       <h1 class="font-size-50 font-weight-300 dms-signin-title"> Thank you</h1>
@@ -593,7 +597,7 @@
               <div class="panel-body">
                 <p class="font-size-30 font-weight-300 text-capitalize padding-bottom-10 dms-signin-title">customer in line</p>
                 <div class="table-condensed">
-                  <table class="table">
+                  <table class="table" id="customer-in-line-table">
                     <thead>
                     <tr>
                       <th>Name</th>
@@ -603,43 +607,6 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                      <td>Teagan Prohaska</td>
-                      <<td><i class="nailsdms-circle-hand"></i> <i class="nailsdms-circle-face"></i> </td>
-                      <td>12:30</td>
-                      <td><button type="button" class="btn btn-sm btn-icon btn-default"><i class="icon md-close" aria-hidden="true"></i> </button> </td>
-                    </tr>
-                    <tr>
-                      <td>Andy Gaylord</td>
-                      <td><i class="nailsdms-circle-hand"></i> <i class="nailsdms-circle-face"></i> </td>
-                      <td>12:35</td>
-                      <td><button type="button" class="btn btn-icon btn-sm btn-default"><i class="icon md-close"></i> </button> </td>
-                    </tr>
-                    <tr>
-                      <td>Veronica Gusikowski</td>
-                      <td><i class="nailsdms-circle-face"></i> <i class="nailsdms-circle-hand"></i> <i class="nailsdms-circle-feet"></i> </td>
-                      <td>12:40</td>
-                      <td><button type="button" class="btn btn-icon btn-sm btn-default"><i class="icon md-close"></i> </button> </td>
-                    </tr>
-                    <tr>
-                      <td>Bruce Rogahn</td>
-                      <td><i class="nailsdms-circle-face"></i> <i class="nailsdms-circle-hand"></i> <i class="nailsdms-circle-feet"></i> </td>
-                      <td>12:46</td>
-                      <td><button type="button" class="btn btn-icon btn-sm btn-default"><i class="icon md-close"></i> </button> </td>
-                    </tr>
-                    <tr>
-                      <td>Carolina Hickle</td>
-                      <td><i class="nailsdms-circle-face"></i> <i class="nailsdms-circle-hand"></i> <i class="nailsdms-circle-feet"></i> </td>
-                      <td>12:48</td>
-                      <td><button type="button" class="btn btn-icon btn-sm btn-default"><i class="icon md-close"></i> </button> </td>
-                    </tr>
-                    <tr>
-                      <td>Madaline Eichmann</td>
-                      <td><i class="nailsdms-circle-face"></i> <i class="nailsdms-circle-hand"></i> <i class="nailsdms-circle-feet"></i> </td>
-                      <td>12:50</td>
-                      <td><button type="button" class="btn btn-icon btn-sm btn-default"><i class="icon md-close"></i> </button> </td>
-                    </tr>
-
                     </tbody>
                   </table>
                 </div>
@@ -673,6 +640,14 @@
   <script src="../../../global/vendor/intro-js/intro.js"></script>
   <script src="../../../global/vendor/screenfull/screenfull.js"></script>
   <script src="../../../global/vendor/slidepanel/jquery-slidePanel.js"></script>
+
+  <script src="../../../global/vendor/datatables/jquery.dataTables.js"></script>
+  <script src="../../../global/vendor/datatables-fixedheader/dataTables.fixedHeader.js"></script>
+  <script src="../../../global/vendor/datatables-bootstrap/dataTables.bootstrap.js"></script>
+  <script src="../../../global/vendor/datatables-responsive/dataTables.responsive.js"></script>
+  <script src="../../../global/vendor/datatables-tabletools/dataTables.tableTools.js"></script>
+  <script src="../../../global/vendor/bootbox/bootbox.js"></script>
+
   <!-- Scripts -->
   <script src="../../../global/js/core.js"></script>
   <script src="../../assets/js/site.js"></script>
@@ -687,6 +662,11 @@
   <script src="../../../global/js/components/slidepanel.js"></script>
   <script src="../../../global/js/components/switchery.js"></script>
   <script src="../../../global/js/components/tabs.js"></script>
+
+  <script src="../../../global/js/components/datatables.js"></script>
+
+  <script src="../../assets/nailsdms/js/customer_in_line_datatable.js"></script>
+
   <script>
     ///
     var current_step, next_step, previous_step;
@@ -762,13 +742,14 @@
           next_step = $('#dms-signin-step-final');
       }
       tracing_selected_services.unshift(next_service);
-
+      /*
       console.log("current_step", current_step);
       console.log("next_step", next_step);
       console.log("current_service", current_service);
       console.log("next_service", next_service);
       console.log("Current selected_services: " + selected_services.join(", "));
       console.log("Current tracing_selected_services: " + tracing_selected_services.join(", "));
+      */
 
       next_step.addClass('animation-fade');
       next_step.removeClass('animation-reverse');
@@ -831,13 +812,14 @@
       }
       selected_services.unshift(current_service);
 
+      /*
       console.log("current_step", current_step);
       console.log("previous_step", previous_step);
       console.log("current_service", current_service);
       console.log("previous_service", previous_service);
       console.log("Current selected_services: " + selected_services.join(", "));
       console.log("Current tracing_selected_services: " + tracing_selected_services.join(", "));
-
+      */
       previous_step.addClass('animation-fade');
       previous_step.removeClass('animation-reverse');
       previous_step.show();
