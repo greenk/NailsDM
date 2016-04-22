@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "e_first_name": "Thu",
+    "e_last_name": "Nguyen",
+    "e_american_name": "Christina",
+    "e_at_work": "1",
+    "e_working": "1",
+    "e_status": "working"
+  },
+  {
+    "id": "2",
+    "e_first_name": "Binh",
+    "e_last_name": "Bui",
+    "e_american_name": "Ben",
+    "e_at_work": "1",
+    "e_working": "0",
+    "e_status": "available"
+  },
+  {
+    "id": "3",
+    "e_first_name": "Ngoc",
+    "e_last_name": "Nguyen",
+    "e_american_name": "Amber",
+    "e_at_work": "1",
+    "e_working": "0",
+    "e_status": "available"
+  },
+  {
+    "id": "4",
+    "e_first_name": "Thang",
+    "e_last_name": "Tran",
+    "e_american_name": "Anthony",
+    "e_at_work": "1",
+    "e_working": "1",
+    "e_status": "working"
+  }
+]

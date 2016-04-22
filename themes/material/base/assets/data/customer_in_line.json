@@ -1,0 +1,258 @@
+[
+  {
+    "id": "1",
+    "c_firstname": "Prohaska",
+    "c_lastname": "Teagan",
+    "c_email": "customer1@email.com",
+    "c_phone": "6151234560",
+    "work_tb":[
+      {
+        "id": "1",
+        "work_created_date": "2016-04-21 10:30:10",
+        "work_started_date": null,
+        "work_finished_date": null,
+        "work_status": "waiting",
+        "request_for": null,
+        "work_type": {
+          "id": "1",
+          "work_name": "manicure",
+          "work_category": "hand",
+          "description": "This is normal manicure",
+          "work_price": "15.00"
+        }
+      },
+      {
+        "id": "2",
+        "work_created_date": "2016-04-21 10:30:10",
+        "work_started_date": null,
+        "work_finished_date": null,
+        "work_status": "waiting",
+        "request_for": null,
+        "work_type": {
+          "id": "5",
+          "work_name": "pedicure",
+          "work_category": "feet",
+          "description": "This is normal pedicure",
+          "work_price": "25.00"
+        }
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "c_firstname": "Andy",
+    "c_lastname": "Gaylord",
+    "c_email": "customer2@email.com",
+    "c_phone": "6151234561",
+    "work_tb":[
+      {
+        "id": "3",
+        "work_created_date": "2016-04-21 10:31:00",
+        "work_started_date": null,
+        "work_finished_date": null,
+        "work_status": "waiting",
+        "request_for": null,
+        "work_type": {
+          "id": "1",
+          "work_name": "manicure",
+          "work_category": "hand",
+          "description": "This is normal manicure",
+          "work_price": "15.00"
+        }
+      },
+      {
+        "id": "4",
+        "work_created_date": "2016-04-21 10:31:00",
+        "work_started_date": null,
+        "work_finished_date": null,
+        "work_status": "waiting",
+        "request_for": null,
+        "work_type": {
+          "id": "5",
+          "work_name": "pedicure",
+          "work_category": "feet",
+          "description": "This is normal pedicure",
+          "work_price": "25.00"
+        }
+      },
+      {
+        "id": "5",
+        "work_created_date": "2016-04-21 10:31:00",
+        "work_started_date": null,
+        "work_finished_date": null,
+        "work_status": "waiting",
+        "request_for": null,
+        "work_type": {
+          "id": "15",
+          "work_name": "eyebrown waxing",
+          "work_category": "waxing",
+          "description": "Cleaning your eyebrown",
+          "work_price": "10.00"
+        }
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "c_firstname": "Veronica",
+    "c_lastname": "Gusikowski",
+    "c_email": "customer3@email.com",
+    "c_phone": "6151234563",
+    "work_tb":[
+      {
+        "id": "6",
+        "work_created_date": "2016-04-21 10:32:00",
+        "work_started_date": null,
+        "work_finished_date": null,
+        "work_status": "waiting",
+        "request_for": null,
+        "work_type": {
+          "id": "2",
+          "work_name": "spa manicure",
+          "work_category": "hand",
+          "description": "This is spa manicure",
+          "work_price": "20.00"
+        }
+      },
+      {
+        "id": "7",
+        "work_created_date": "2016-04-21 10:32:00",
+        "work_started_date": null,
+        "work_finished_date": null,
+        "work_status": "waiting",
+        "request_for": null,
+        "work_type": {
+          "id": "10",
+          "work_name": "gel polish",
+          "work_category": "hand",
+          "description": "This is gel for hand",
+          "work_price": "25.00"
+        }
+      },
+      {
+        "id": "8",
+        "work_created_date": "2016-04-21 10:32:00",
+        "work_started_date": null,
+        "work_finished_date": null,
+        "work_status": "waiting",
+        "request_for": null,
+        "work_type": {
+          "id": "15",
+          "work_name": "eyebrown waxing",
+          "work_category": "waxing",
+          "description": "Cleaning your eyebrown",
+          "work_price": "10.00"
+        }
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "c_firstname": "Bruce",
+    "c_lastname": "Rogahn",
+    "c_email": "customer4@email.com",
+    "c_phone": "6151234564",
+    "work_tb":[
+      {
+        "id": "9",
+        "work_created_date": "2016-04-21 10:34:00",
+        "work_started_date": null,
+        "work_finished_date": null,
+        "work_status": "waiting",
+        "request_for": null,
+        "work_type": {
+          "id": "3",
+          "work_name": "deluxe manicure",
+          "work_category": "hand",
+          "description": "This is deluxe manicure",
+          "work_price": "25.00"
+        }
+      },
+      {
+        "id": "10",
+        "work_created_date": "2016-04-21 10:34:00",
+        "work_started_date": null,
+        "work_finished_date": null,
+        "work_status": "waiting",
+        "request_for":{
+          "id":"2",
+          "e_firstname": "Ngoc",
+          "e_lastname": "Nguyen",
+          "e_american_name": "Amber",
+          "e_at_work": "1",
+          "e_working": "0",
+          "e_status": "available"
+        },
+        "work_type": {
+          "id": "5",
+          "work_name": "pedicure",
+          "work_category": "feet",
+          "description": "This is regular pedicure",
+          "work_price": "25.00"
+        }
+      },
+      {
+        "id": "11",
+        "work_created_date": "2016-04-21 10:34:00",
+        "work_started_date": null,
+        "work_finished_date": null,
+        "work_status": "waiting",
+        "request_for": null,
+        "work_type": {
+          "id": "13",
+          "work_name": "gel polish",
+          "work_category": "feet",
+          "description": "Polish your feet with gel color",
+          "work_price": "30.00"
+        }
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "c_firstname": "Carolina",
+    "c_lastname": "Hickle",
+    "c_email": "customer5@email.com",
+    "c_phone": "6151234565",
+    "work_tb":[
+      {
+        "id": "12",
+        "work_created_date": "2016-04-21 10:35:00",
+        "work_started_date": null,
+        "work_finished_date": null,
+        "work_status": "waiting",
+        "request_for":{
+          "id":"1",
+          "e_firstname": "thu",
+          "e_lastname": "nguyen",
+          "e_american_name": "Christina",
+          "e_at_work": "1",
+          "e_working": "1",
+          "e_status": "working"
+        },
+        "work_type": {
+          "id": "20",
+          "work_name": "acrylic full set",
+          "work_category": "hand",
+          "description": "This is acrylic full set",
+          "work_price": "25.00"
+        }
+      },
+      {
+        "id": "13",
+        "work_created_date": "2016-04-21 10:35:00",
+        "work_started_date": null,
+        "work_finished_date": null,
+        "work_status": "waiting",
+        "request_for": null,
+        "work_type": {
+          "id": "5",
+          "work_name": "pedicure",
+          "work_category": "feet",
+          "description": "This is regular pedicure",
+          "work_price": "25.00"
+        }
+      }
+    ]
+  }
+]
