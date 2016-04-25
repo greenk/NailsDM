@@ -64,7 +64,7 @@
     <!-- Page Content -->
     <div class="page-content vertical-align-middle container-fluid">
       <div class="row">
-        <div class="col-xlg-8 col-md-8 col-lg-8">
+        <div class="col-xlg-8 col-md-8 col-lg-8 col-sm-12">
 
           <div class="panel">
             <div class="panel-body font-size-20">
@@ -520,7 +520,7 @@
                       <div class="clearfix"></div>
 
                       <div class="dms-request-nail-tech margin-top-20" style="display: none;">
-                        <table class="table table-hover font-size-16" data-selectable="selectable" data-row-selectable="true">
+                        <table class="table table-hover font-size-16" id="employee-status-table">
                           <thead>
                             <tr>
                               <th class="bs-checkbox width-50"></th>
@@ -529,34 +529,6 @@
                             </tr>
                           </thead>
                           <tbody>
-                          <tr>
-                            <td class="bs-checkbox">
-                              <input data-index="0" name="select-nail-tech" type="radio"/>
-                            </td>
-                            <td> Christina </td>
-                            <td><span class="label label-danger">Working</span></td>
-                          </tr>
-                          <tr data-index="1">
-                            <td class="bs-checkbox">
-                              <input data-index="1" name="select-nail-tech" type="radio"/>
-                            </td>
-                            <td> Ben </td>
-                            <td><span class="label label-info">Available</span></td>
-                          </tr>
-                          <tr data-index="2">
-                            <td class="bs-checkbox">
-                              <input data-index="2" name="select-nail-tech" type="radio"/>
-                            </td>
-                            <td> Amber </td>
-                            <td><span class="label label-info">Available</span></td>
-                          </tr>
-                          <tr data-index="3">
-                            <td class="bs-checkbox">
-                              <input data-index="3" name="select-nail-tech" type="radio"/>
-                            </td>
-                            <td> Anthony </td>
-                            <td><span class="label label-danger">Working</span></td>
-                          </tr>
 
                           </tbody>
                         </table>
@@ -578,45 +550,46 @@
           </div>
         </div>
 
-        <div class="col-xlg-4 col-md-4 col-lg-4">
-
-          <div class="col-lg-2 col-md-2 col-xlg-2 col-sm-2 visible-md visible-lg visible-xlg">
-            <div class="bg-white dms-signin-estimate-icon-bg">
-              <i class="icon md-time dms-font-size-4em font-weight-300 dms-signin-estimate-icon" aria-hidden="true"></i>
+        <div class="col-xlg-4 col-md-4 col-lg-4 col-sm-12">
+          <div class="row">
+            <div class="col-lg-2 col-xlg-2 col-md-2 visible-lg ">
+              <div class="bg-white dms-signin-estimate-icon-bg text-center">
+                <i class="icon md-time dms-font-size-4em font-weight-300 dms-signin-estimate-icon" aria-hidden="true"></i>
+              </div>
             </div>
-          </div>
-          <div class="col-lg-10 col-md-12 col-xlg-10 col-sm-12">
-            <p class="dms-signin-estimate-title font-weight-300 margin-top-10">  Estimate Wait Time</p>
+            <div class="col-lg-10 col-xlg-10 col-md-12 col-sm-12">
+              <p class="dms-signin-estimate-title font-weight-300 margin-top-10">  Estimate Wait Time</p>
+            </div>
           </div>
           <div class="clearfix"></div>
           <p class="dms-signin-estimate-time font-weight-300 text-center"> 30 mins</p>
-          <div class="clearfix"></div>
 
           <!-- Customer in line -->
           <div class="panel">
               <div class="panel-body">
-                <p class="font-size-30 font-weight-300 text-capitalize padding-bottom-10 dms-signin-title">customer in line</p>
-                <div class="table-condensed">
-                  <table class="table" id="customer-in-line-table">
-                    <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>Services</th>
-                      <th>Sign in</th>
-                      <th></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                  </table>
-                </div>
+
+                    <p class="font-size-30 font-weight-300 text-capitalize padding-bottom-10 dms-signin-title">customer in line</p>
+
+                      <table class="table dataTable" id="customer-in-line-table">
+                        <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Services</th>
+                          <th>Sign in</th>
+                          <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                      </table>
+
+
               </div>
           </div>
           <!-- Use this hidden text to help correct vertical middle alignment -->
           <p class="font-size-10" style="visibility: hidden;" >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
 
         </div>
-        <div class="clearfix"></div>
 
       </div> <!-- End of main row -->
     </div>
@@ -666,6 +639,7 @@
   <script src="../../../global/js/components/datatables.js"></script>
 
   <script src="../../assets/nailsdms/js/customer_in_line_datatable.js"></script>
+  <script src="../../assets/nailsdms/js/employee_status_datatable.js"></script>
 
   <script>
     ///

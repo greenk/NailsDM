@@ -53,7 +53,7 @@ var CustomerInLineTable = {
                     var customer_obj;
 
                     var obj_count = json.length;
-                    console.log("my obj_count: ", obj_count);
+
 
                     for (var i = 0; i < obj_count; i++){
                         cobj_id = json[i].id;
@@ -95,7 +95,7 @@ var CustomerInLineTable = {
                                     }
                                     break;
                                 default:
-                                    // dont' need to push anything in
+                                    // don't need to push anything in
                             }
 
                             // process to get earliest time
@@ -121,6 +121,12 @@ var CustomerInLineTable = {
 
                 }
             },
+            ordering: false,
+            orderFixed: {
+                "pre": [2, 'asc']
+            },
+            info: false,
+            pagingType: "numbers",
             columns: [
                 { "data": "customer_name"},
                 { "data": "service_type[ ]"},
@@ -135,14 +141,65 @@ var CustomerInLineTable = {
 
         });
 
-        window.dt = this.datatable;
+        //window.dt = this.datatable;
 
         return this;
     },
 
     events: function(){
+        var _self = this;
+        this.$table
+            .on('click', 'a.cancel-service', function(e){
+                e.preventDefault();
+
+                var $row = $(this).closest('tr');
+                var customer_name_canceling = $row.find('td:eq(0)').text().toLowerCase();
+                var customer_name_canceling_title = '<p class="font-size-30 font-weight-300 text-capitalize dms-signin-title">' + customer_name_canceling + '</p>';
+                bootbox.dialog({
+                    message: '<p class="font-size-18">Are you sure that you want to leave our line?</p>' +
+                             '<label for="cancel-order-confirm"> Enter Your First Name: </label>' +
+                             '<input id="cancel-order-confirm" name="cancel-order-confirm" type="text" class="form-control input-md">',
+                    title: customer_name_canceling_title,
+                    buttons: {
+                        danger: {
+                            label: "Confirm",
+                            className: "btn-danger",
+                            callback: function(result){
+                                //get input value
+                                var confirm_val = $('#cancel-order-confirm').val().toLowerCase();
+                                if(confirm_val && customer_name_canceling.indexOf(confirm_val) > -1)
+                                    _self.rowRemove($row);
+                            }
+                        },
+                        main: {
+                            label: "Cancel",
+                            className: "btn-primary",
+                            callback: function(){}
+                        }
+                    }
+                });
+            });
+
+        this.dialog.$cancel.on('click', function(e) {
+            e.preventDefault();
+            $.magnificPopup.close();
+        });
 
         return this;
+    },
+
+    // ==========
+    // ROW FUNCTIONS
+    // ============
+
+    rowRemove: function($row) {
+        this.datatable.row($row.get(0)).remove().draw();
+
+        //console.log("$row.get(0)", $row.get(0));
+        //console.log("customer's id cancelling", $row.find('.cancel-service').data("dmscustomerid"));
+        //Remember to call Ajax function to let system know this customer already cancel his/her service
+        // Ajax CALL
+
     },
 
 }
