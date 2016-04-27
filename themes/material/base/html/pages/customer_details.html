@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html class="no-js css-menubar" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <meta name="description" content="bootstrap admin template">
+  <meta name="author" content="">
+  <title>Nails DMS | Nails Digital Management Solution</title>
+  <!--
+  <link rel="apple-touch-icon" href="../../assets/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+  -->
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../../../global/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../global/css/bootstrap-extend.min.css">
+  <link rel="stylesheet" href="../../assets/css/site.min.css">
+  <!-- Plugins -->
+  <link rel="stylesheet" href="../../../global/vendor/animsition/animsition.css">
+  <link rel="stylesheet" href="../../../global/vendor/asscrollable/asScrollable.css">
+  <link rel="stylesheet" href="../../../global/vendor/switchery/switchery.css">
+  <link rel="stylesheet" href="../../../global/vendor/intro-js/introjs.css">
+  <link rel="stylesheet" href="../../../global/vendor/slidepanel/slidePanel.css">
+  <link rel="stylesheet" href="../../../global/vendor/flag-icon-css/flag-icon.css">
+  <link rel="stylesheet" href="../../../global/vendor/waves/waves.css">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="../../../global/fonts/font-awesome/font-awesome.css">
+  <link rel="stylesheet" href="../../../global/fonts/material-design/material-design.min.css">
+  <link rel="stylesheet" href="../../../global/fonts/brand-icons/brand-icons.min.css">
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
+
+  <!-- NailsDMS Fonts -->
+  <link rel="stylesheet" href="../../assets/nailsdms/nailsdms-fonts/nailsdms-icon.css">
+
+
+  <!--[if lt IE 9]>
+    <script src="../../../global/vendor/html5shiv/html5shiv.min.js"></script>
+    <![endif]-->
+  <!--[if lt IE 10]>
+    <script src="../../../global/vendor/media-match/media.match.min.js"></script>
+    <script src="../../../global/vendor/respond/respond.min.js"></script>
+    <![endif]-->
+  <!-- Scripts -->
+  <script src="../../../global/vendor/modernizr/modernizr.js"></script>
+  <script src="../../../global/vendor/breakpoints/breakpoints.js"></script>
+  <script>
+  Breakpoints();
+  </script>
+</head>
+<body>
+  <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-mega" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle hamburger hamburger-close navbar-toggle-left hided"
+      data-toggle="menubar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="hamburger-bar"></span>
+      </button>
+      <button type="button" class="navbar-toggle collapsed" data-target="#site-navbar-collapse"
+      data-toggle="collapse">
+        <i class="icon md-more" aria-hidden="true"></i>
+      </button>
+      <div class="navbar-brand navbar-brand-center">
+        <a href="#" class="white">
+          <!-- <img class="navbar-brand-logo" src="../../assets/images/logo.png" title="Remark"> -->
+          <span class="navbar-brand-text font-size-26"> Nails DMS</span>
+        </a>
+      </div>
+
+    </div>
+    <div class="navbar-container container-fluid">
+      <!-- Navbar Collapse -->
+      <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
+        <!-- Navbar Toolbar -->
+        <ul class="nav navbar-toolbar">
+          <li class="hidden-float" id="toggleMenubar">
+            <a data-toggle="menubar" href="#" role="button">
+              <i class="icon hamburger hamburger-arrow-left">
+                  <span class="sr-only">Toggle menubar</span>
+                  <span class="hamburger-bar"></span>
+                </i>
+            </a>
+          </li>
+          <li class="hidden-xs" id="toggleFullscreen">
+            <a class="icon icon-fullscreen" data-toggle="fullscreen" href="#" role="button">
+              <span class="sr-only">Toggle fullscreen</span>
+            </a>
+          </li>
+
+        </ul>
+        <!-- End Navbar Toolbar -->
+        <!-- Navbar Toolbar Right -->
+        <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" data-animation="scale-up"
+            aria-expanded="false" role="button">
+              <span class="flag-icon flag-icon-us"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem">
+                  <span class="flag-icon flag-icon-vn"></span> Vietnamese</a>
+              </li>
+
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="navbar-avatar dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"
+            data-animation="scale-up" role="button">
+              <span class="avatar avatar-online">
+                <img src="../../../global/portraits/b1.jpg" alt="...">
+                <i></i>
+              </span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem"><i class="icon md-account" aria-hidden="true"></i> Profile</a>
+              </li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem"><i class="icon fa fa-money" aria-hidden="true"></i> Income</a>
+              </li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem"><i class="icon md-settings" aria-hidden="true"></i> Settings</a>
+              </li>
+              <li class="divider" role="presentation"></li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem"><i class="icon md-power" aria-hidden="true"></i> Logout</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a data-toggle="dropdown" href="javascript:void(0)" title="Notifications" aria-expanded="false"
+            data-animation="scale-up" role="button">
+              <i class="icon md-notifications" aria-hidden="true"></i>
+              <span class="badge badge-danger up">3</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
+              <li class="dropdown-menu-header" role="presentation">
+                <h5>NOTIFICATIONS</h5>
+                <span class="label label-round label-danger">New 3</span>
+              </li>
+              <li class="list-group" role="presentation">
+                <div data-role="container">
+                  <div data-role="content">
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon md-receipt bg-red-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">A new customer has been assigned</h6>
+                          <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">10 minutes ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon md-account bg-green-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Customer has been checked out</h6>
+                          <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">1 hour ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon md-settings bg-red-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Settings updated</h6>
+                          <time class="media-meta" datetime="2015-06-11T14:05:00+08:00">2 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown-menu-footer" role="presentation">
+                <a class="dropdown-menu-footer-btn" href="javascript:void(0)" role="button">
+                  <i class="icon md-settings" aria-hidden="true"></i>
+                </a>
+                <a href="javascript:void(0)" role="menuitem">
+                    All notifications
+                  </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a data-toggle="dropdown" href="javascript:void(0)" title="Messages" aria-expanded="false"
+            data-animation="scale-up" role="button">
+              <i class="icon md-email" aria-hidden="true"></i>
+              <span class="badge badge-info up">3</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
+              <li class="dropdown-menu-header" role="presentation">
+                <h5>MESSAGES</h5>
+                <span class="label label-round label-info">New 3</span>
+              </li>
+              <li class="list-group" role="presentation">
+                <div data-role="container">
+                  <div data-role="content">
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-online">
+                            <img src="../../../global/portraits/m1.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Manager</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-17T20:22:05+08:00">30 minutes ago</time>
+                          </div>
+                          <div class="media-detail">You have 1 customer waiting for pedicure</div>
+                        </div>
+                      </div>
+                    </a>
+
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-online">
+                            <img src="../../../global/portraits/q1.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Owner</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-16T18:38:40+08:00">2 days ago</time>
+                          </div>
+                          <div class="media-detail">Your salary for the week of 03/01/2016 to 03/07/2016 is ready to pick up. Come to my desk to take it</div>
+                        </div>
+                      </div>
+                    </a>
+
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-online">
+                            <img src="../../../global/portraits/m1.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Manager</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-17T12:30:30+08:00">4 days ago</time>
+                          </div>
+                          <div class="media-detail">Mary Lane gave you $5 tips in cash. Come to reception desk to take it</div>
+                        </div>
+                      </div>
+                    </a>
+
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown-menu-footer" role="presentation">
+                <a class="dropdown-menu-footer-btn" href="javascript:void(0)" role="button">
+                  <i class="icon md-settings" aria-hidden="true"></i>
+                </a>
+                <a href="javascript:void(0)" role="menuitem">
+                    See all messages
+                  </a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+        <!-- End Navbar Toolbar Right -->
+      </div>
+      <!-- End Navbar Collapse -->
+
+    </div>
+  </nav>
+  <div class="site-menubar">
+    <div class="site-menubar-body">
+      <div>
+        <div>
+          <ul class="site-menu">
+            <li class="site-menu-category">General</li>
+            <li class="site-menu-item">
+              <a class="animsition-link" href="#">
+                <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+                <span class="site-menu-title">Dashboard</span>
+              </a>
+            </li>
+            <li class="site-menu-item has-sub active open">
+              <a href="javascript:void(0)">
+                <!--<i class="site-menu-icon md-view-compact" aria-hidden="true"></i> -->
+                <i class="site-menu-icon icon fa-money" aria-hidden="true"></i>
+                <span class="site-menu-title">Income</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="#">
+                    <span class="site-menu-title">Your Shop</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="#">
+                    <span class="site-menu-title">Employee</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)">
+                <i class="site-menu-icon md-google-pages" aria-hidden="true"></i>
+                <span class="site-menu-title">Inventory</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                <li class="site-menu-item has-sub">
+                  <a href="javascript:void(0)">
+                    <span class="site-menu-title">Colors</span>
+                    <span class="site-menu-arrow"></span>
+                  </a>
+                  <ul class="site-menu-sub">
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="../pages/error-400.html">
+                        <span class="site-menu-title">OPI</span>
+                      </a>
+                    </li>
+                    <li class="site-menu-item">
+                      <a class="animsition-link" href="../pages/error-403.html">
+                        <span class="site-menu-title">CND</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="#">
+                    <span class="site-menu-title">Acrylic</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="site-menu-category">Employee</li>
+
+            <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)">
+                <i class="site-menu-icon md-account" aria-hidden="true"></i>
+                <span class="site-menu-title">Employee</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="#">
+                    <span class="site-menu-title">List</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="#">
+                    <span class="site-menu-title">Create</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="#">
+                    <span class="site-menu-title">Edit</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="#">
+                    <span class="site-menu-title">Delete</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)">
+                <i class="site-menu-icon md-account-box" aria-hidden="true"></i>
+                <span class="site-menu-title ">At work</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="#">
+                    <span class="site-menu-title">Available</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="#">
+                    <span class="site-menu-title">Working</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="site-menu-category">Customer</li>
+
+            <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)">
+                <i class="site-menu-icon md-accounts-alt" aria-hidden="true"></i>
+                <span class="site-menu-title">Customer</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="#">
+                    <span class="site-menu-title">List</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="#">
+                    <span class="site-menu-title">Create</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="#">
+                    <span class="site-menu-title">Edit</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="#">
+                    <span class="site-menu-title">Delete</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="site-menu-item has-sub">
+              <a href="javascript:void(0)">
+                <i class="site-menu-icon md-accounts-outline" aria-hidden="true"></i>
+                <span class="site-menu-title">Current</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              <ul class="site-menu-sub">
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="#">
+                    <span class="site-menu-title">Sign In</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="#">
+                    <span class="site-menu-title">Waiting</span>
+                  </a>
+                </li>
+                <li class="site-menu-item">
+                  <a class="animsition-link" href="#">
+                    <span class="site-menu-title">In Service</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+
+
+          </ul>
+          <div class="site-menubar-section">
+            <h5>
+              Working
+              <span class="pull-right">30%</span>
+            </h5>
+            <div class="progress progress-xs">
+              <div class="progress-bar active" style="width: 30%;" role="progressbar"></div>
+            </div>
+            <h5>
+              Waiting
+              <span class="pull-right">60%</span>
+            </h5>
+            <div class="progress progress-xs">
+              <div class="progress-bar progress-bar-warning" style="width: 60%;" role="progressbar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="site-menubar-footer">
+      <a href="javascript: void(0);" class="fold-show" data-placement="top" data-toggle="tooltip"
+      data-original-title="Settings">
+        <span class="icon md-settings" aria-hidden="true"></span>
+      </a>
+      <a href="javascript: void(0);" data-placement="top" data-toggle="tooltip" data-original-title="Lock">
+        <span class="icon md-eye-off" aria-hidden="true"></span>
+      </a>
+      <a href="javascript: void(0);" data-placement="top" data-toggle="tooltip" data-original-title="Logout">
+        <span class="icon md-power" aria-hidden="true"></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Page -->
+  <div class="page animsition">
+    <div class="page-content">
+      <div class="panel">
+        <header class="panel-heading text-center">
+          <h3 class="panel-title"> Prohaska Teagan </h3>
+          <p> Christina <br />
+              Ben
+          </p>
+        </header>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-6 col-xs-6">
+              <a class="btn btn-primary btn-block">Start</a>
+            </div>
+            <div class="col-sm-6 col-xs-6">
+              <a class="btn btn-danger btn-block">Cancel</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-xs-12">
+              <p class="font-size-20 font-weight-300 text-capitalize margin-bottom-5 dms-signin-title"><i class="nailsdms-circle-hand"></i> Hand Services</p>
+              <table class="table table-responsive table-bordered text-center">
+                <tr>
+                  <td><input type="checkbox" name="customer-hand-service[]" value="manicure"/> </td>
+                  <td>Manicure</td>
+                  <td>$<input type="text" name="service-price-manicure" value="15.00" maxlength="6" size="5" /> </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="customer-hand-service[]" value="gel-polish" /> </td>
+                  <td>Gel</td>
+                  <td>$<input type="text" name="service-price-gel-polish" value="25.00" maxlength="6" size="5" /> </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="customer-hand-service[]" value="french-tip" /> </td>
+                  <td>French Tip</td>
+                  <td>$<input type="text" name="service-price-french-tip" value="5.00" maxlength="6" size="5" /> </td>
+                </tr>
+                <tr>
+                  <td colspan="3"><a href="#"> +Add more hand services</a> </td>
+                </tr>
+              </table>
+              <p class="font-size-20 font-weight-300 text-capitalize margin-bottom-5 dms-signin-title"><i class="nailsdms-circle-feet"></i> Feet Services</p>
+              <table class="table table-responsive table-bordered text-center">
+                <tr>
+                  <td><input type="checkbox" name="customer-feet-service[]" value="pedicure"/> </td>
+                  <td>Manicure</td>
+                  <td>$<input type="text" name="service-price-pedicure" value="25.00" maxlength="6" size="5"/> </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="customer-feet-service[]" value="gel-polish" /> </td>
+                  <td>Gel</td>
+                  <td>$<input type="text" name="service-price-feet-gel-polish" value="35.00" maxlength="6" size="5"/> </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="customer-feet-service[]" value="french-tip" /> </td>
+                  <td>French Tip</td>
+                  <td>$<input type="text" name="service-price-feet-french-tip" value="5.00" maxlength="6" size="5"/> </td>
+                </tr>
+                <tr>
+                  <td colspan="3"><a href="#"> +Add more feet services</a> </td>
+                </tr>
+              </table>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="col-sm-7 col-xs-7">
+              <h3>Total</h3>
+            </div>
+            <div class="col-sm-5 col-xs-5 text-center">
+              <span class="font-size-20"><i class="icon md-money"></i> 110.00</span>
+            </div>
+
+            <div class="clearfix"></div>
+            <div class="col-sm-12 col-xs-12">
+              <button type="button" class="btn btn-warning btn-block">Done</button>
+            </div>
+            <div class="col-sm-12 col-xs-12">
+              <button type="button" class="btn btn-success btn-block">Pay</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Page -->
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-footer-legal">© 2016 <a href="#">Nails DMS</a></div>
+    <div class="site-footer-right">
+      A Product of <span class="flag-icon flag-icon-vn"></span> by <a href="#">Viet Application Inc.</a>
+    </div>
+  </footer>
+  <!-- Core  -->
+  <script src="../../../global/vendor/jquery/jquery.js"></script>
+  <script src="../../../global/vendor/bootstrap/bootstrap.js"></script>
+  <script src="../../../global/vendor/animsition/animsition.js"></script>
+  <script src="../../../global/vendor/asscroll/jquery-asScroll.js"></script>
+  <script src="../../../global/vendor/mousewheel/jquery.mousewheel.js"></script>
+  <script src="../../../global/vendor/asscrollable/jquery.asScrollable.all.js"></script>
+  <script src="../../../global/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
+  <script src="../../../global/vendor/waves/waves.js"></script>
+  <!-- Plugins -->
+  <script src="../../../global/vendor/switchery/switchery.min.js"></script>
+  <script src="../../../global/vendor/intro-js/intro.js"></script>
+  <script src="../../../global/vendor/screenfull/screenfull.js"></script>
+  <script src="../../../global/vendor/slidepanel/jquery-slidePanel.js"></script>
+  <!-- Scripts -->
+  <script src="../../../global/js/core.js"></script>
+  <script src="../../assets/js/site.js"></script>
+  <script src="../../assets/js/sections/menu.js"></script>
+  <script src="../../assets/js/sections/menubar.js"></script>
+  <script src="../../assets/js/sections/gridmenu.js"></script>
+  <script src="../../assets/js/sections/sidebar.js"></script>
+  <script src="../../../global/js/configs/config-colors.js"></script>
+  <script src="../../assets/js/configs/config-tour.js"></script>
+  <script src="../../../global/js/components/asscrollable.js"></script>
+  <script src="../../../global/js/components/animsition.js"></script>
+  <script src="../../../global/js/components/slidepanel.js"></script>
+  <script src="../../../global/js/components/switchery.js"></script>
+  <script src="../../../global/js/components/tabs.js"></script>
+  <script>
+  (function(document, window, $) {
+    'use strict';
+    var Site = window.Site;
+    $(document).ready(function() {
+      Site.run();
+    });
+  })(document, window, jQuery);
+  </script>
+</body>
+</html>

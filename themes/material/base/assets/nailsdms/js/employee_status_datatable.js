@@ -79,9 +79,11 @@ var EmployeeStatusTable = {
 
                 }
             },
+            responsive: true,
+            autoWidth: false,
             ordering: false,
             info: false,
-            pagingType: "numbers",
+            paging:false,
             columns: [
                 { "data": "radio_select_bt"},
                 { "data": "employee_american_name"},
