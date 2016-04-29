@@ -1,0 +1,247 @@
+{
+  "customer": {
+    "id": "1",
+    "c_firstname": "Prohaska",
+    "c_lastname": "Teagan",
+    "c_email": "customer1@email.com",
+    "c_phone": "6151234560",
+    "work_tb":[
+      {
+        "id": "1",
+        "work_created_date": "2016-04-21T10:30:10",
+        "work_started_date": null,
+        "work_finished_date": null,
+        "work_status": "waiting",
+        "request_for": null,
+        "work_type": {
+          "id": "1",
+          "work_name": "manicure",
+          "work_category": "hand",
+          "description": "This is normal manicure",
+          "work_price": "15.00"
+        },
+        "employee": {
+          "id": "1",
+          "e_first_name": "Thu",
+          "e_last_name": "Nguyen",
+          "e_american_name": "Christina"
+        }
+      },
+      {
+        "id": "2",
+        "work_created_date": "2016-04-21T10:30:10",
+        "work_started_date": null,
+        "work_finished_date": null,
+        "work_status": "waiting",
+        "request_for": null,
+        "work_type": {
+          "id": "5",
+          "work_name": "pedicure",
+          "work_category": "feet",
+          "description": "This is normal pedicure",
+          "work_price": "25.00"
+        },
+        "employee": null
+      }
+    ]
+  },
+  "services_list":[
+    {
+      "name": "hand services",
+      "hand_services_list": [
+        {
+          "id": "1",
+          "work_name": "manicure",
+          "work_group": "manicure",
+          "work_category": "hand",
+          "work_price": "15.00"
+        },
+        {
+          "id": "2",
+          "work_name": "signature manicure",
+          "work_group": "manicure",
+          "work_category": "hand",
+          "work_price": "20.00"
+        },
+        {
+          "id": "3",
+          "work_name": "deluxe manicure",
+          "work_group": "manicure",
+          "work_category": "hand",
+          "work_price": "25.00"
+        },
+        {
+          "id": "4",
+          "work_name": "gel polish",
+          "work_group": "add on",
+          "work_category": "hand",
+          "work_price": "25.00"
+        },
+        {
+          "id": "5",
+          "work_name": "french tip",
+          "work_group": "add on",
+          "work_category": "hand",
+          "work_price": "5.00"
+        },
+        {
+          "id": "6",
+          "work_name": "design",
+          "work_group": "add on",
+          "work_category": "hand",
+          "work_price": "5.00"
+        },
+        {
+          "id": "7",
+          "work_name": "full-set acrylic",
+          "work_group": "acrylic",
+          "work_category": "hand",
+          "work_price": "20.00"
+        },
+        {
+          "id": "8",
+          "work_name": "fill-in acrylic",
+          "work_group": "acrylic",
+          "work_category": "hand",
+          "work_price": "15.00"
+        },
+        {
+          "id": "9",
+          "work_name": "Pink and White acrylic",
+          "work_group": "acrylic",
+          "work_category": "hand",
+          "work_price": "45.00"
+        },
+        {
+          "id": "10",
+          "work_name": "fill-in P/W acrylic",
+          "work_group": "acrylic",
+          "work_category": "hand",
+          "work_price": "30.00"
+        },
+        {
+          "id": "11",
+          "work_name": "White Tip acrylic",
+          "work_group": "acrylic",
+          "work_category": "hand",
+          "work_price": "30.00"
+        },
+        {
+          "id": "12",
+          "work_name": "Color Powder acrylic",
+          "work_group": "acrylic",
+          "work_category": "hand",
+          "work_price": "30.00"
+        }
+      ]
+    },
+    {
+      "name": "feet services",
+      "feet_services_list":[
+        {
+          "id": "13",
+          "work_name": "pedicure",
+          "work_group": "pedicure",
+          "work_category": "feet",
+          "work_price": "25.00"
+        },
+        {
+          "id": "14",
+          "work_name": "signature pedicure",
+          "work_group": "pedicure",
+          "work_category": "feet",
+          "work_price": "30.00"
+        },
+        {
+          "id": "15",
+          "work_name": "deluxe pedicure",
+          "work_group": "pedicure",
+          "work_category": "feet",
+          "work_price": "40.00"
+        },
+        {
+          "id": "16",
+          "work_name": "gel polish",
+          "work_group": "add on",
+          "work_category": "feet",
+          "work_price": "25.00"
+        },
+        {
+          "id": "17",
+          "work_name": "french tip",
+          "work_group": "add on",
+          "work_category": "feet",
+          "work_price": "5.00"
+        },
+        {
+          "id": "18",
+          "work_name": "design",
+          "work_group": "add on",
+          "work_category": "feet",
+          "work_price": "5.00"
+        },
+        {
+          "id": "19",
+          "work_name": "full-set acrylic",
+          "work_group": "acrylic",
+          "work_category": "feet",
+          "work_price": "20.00"
+        },
+        {
+          "id": "20",
+          "work_name": "fill-in acrylic",
+          "work_group": "acrylic",
+          "work_category": "feet",
+          "work_price": "15.00"
+        },
+        {
+          "id": "21",
+          "work_name": "Pink and White acrylic",
+          "work_group": "acrylic",
+          "work_category": "feet",
+          "work_price": "45.00"
+        },
+        {
+          "id": "22",
+          "work_name": "fill-in P/W acrylic",
+          "work_group": "acrylic",
+          "work_category": "feet",
+          "work_price": "30.00"
+        },
+        {
+          "id": "23",
+          "work_name": "White Tip acrylic",
+          "work_group": "acrylic",
+          "work_category": "feet",
+          "work_price": "30.00"
+        },
+        {
+          "id": "24",
+          "work_name": "Color Powder acrylic",
+          "work_group": "acrylic",
+          "work_category": "feet",
+          "work_price": "30.00"
+        }
+      ]
+    },
+    {
+      "name": "waxing services",
+      "waxing_services_list":[
+        {
+          "id": "25",
+          "work_name": "eyebrown",
+          "work_group": "waxing",
+          "work_category": "waxing",
+          "work_price": "10.00"
+        },
+        {
+          "id": "26",
+          "work_name": "chin",
+          "work_group": "waxing",
+          "work_category": "waxing",
+          "work_price": "8.00"
+        }
+      ]
+    }
+  ]
+}
