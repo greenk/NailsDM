@@ -1,0 +1,31 @@
+
+/* Color for spinner */
+
+.active .loader-layer.loader-teal-only {
+    opacity: 1;
+    -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(.4,0,.2,1) infinite both;
+    -o-animation: fill-unfill-rotate 5332ms cubic-bezier(.4,0,.2,1) infinite both;
+    animation: fill-unfill-rotate 5332ms cubic-bezier(.4,0,.2,1) infinite both;
+}
+
+.loader-teal-only{
+    border-color: #009688;
+}
+
+/* Overwrite page size for small screen device - less than 322px */
+
+@media only screen and (max-width : 320px){
+    .page-content {
+        padding-bottom: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 10px;
+    }
+
+    .navbar-brand {
+        padding-top: 22px;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-bottom: 22px;
+    }
+}

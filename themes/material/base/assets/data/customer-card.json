@@ -9,14 +9,15 @@
       {
         "id": "1",
         "work_created_date": "2016-04-21T10:30:10",
-        "work_started_date": null,
-        "work_finished_date": null,
-        "work_status": "waiting",
-        "request_for": null,
+        "work_started_date": "2016-04-21T10:35:10",
+        "work_finished_date": "2016-04-21T10:45:10",
+        "work_status": "done",
+        "request_for": "Christina",
         "work_type": {
           "id": "1",
           "work_name": "manicure",
           "work_category": "hand",
+          "work_group": "manicure",
           "description": "This is normal manicure",
           "work_price": "15.00"
         },
@@ -37,12 +38,31 @@
         "work_type": {
           "id": "5",
           "work_name": "pedicure",
+          "work_group": "pedicure",
           "work_category": "feet",
           "description": "This is normal pedicure",
           "work_price": "25.00"
         },
         "employee": null
+      },
+      {
+        "id": "3",
+        "work_created_date": "2016-04-21T10:30:10",
+        "work_started_date": null,
+        "work_finished_date": null,
+        "work_status": "waiting",
+        "request_for": null,
+        "work_type": {
+          "id": "4",
+          "work_name": "gel polish",
+          "work_group": "add on",
+          "work_category": "feet",
+          "description": "Gel polish",
+          "work_price": "25.00"
+        },
+        "employee": null
       }
+
     ]
   },
   "services_list":[

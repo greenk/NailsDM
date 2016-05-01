@@ -16,6 +16,9 @@
   <link rel="stylesheet" href="../../../global/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../../global/css/bootstrap-extend.min.css">
   <link rel="stylesheet" href="../../assets/css/site.min.css">
+
+  <link rel="stylesheet" href="../../assets/nailsdms/css/nailsdms-style.css">
+
   <!-- Plugins -->
   <link rel="stylesheet" href="../../../global/vendor/animsition/animsition.css">
   <link rel="stylesheet" href="../../../global/vendor/asscrollable/asScrollable.css">
@@ -495,178 +498,95 @@
   <!-- Page -->
   <div class="page animsition">
     <div class="page-content">
-      <div class="panel">
-        <header class="panel-heading text-center">
-          <h3 class="panel-title"> Prohaska Teagan </h3>
-          <p> Christina <br />
-              Ben
-          </p>
-        </header>
-        <div class="panel-body">
-          <div class="row margin-bottom-10">
-            <div class="col-sm-6 col-xs-6">
-              <a class="btn btn-primary btn-block">Start</a>
-            </div>
-            <div class="col-sm-6 col-xs-6">
-              <a class="btn btn-danger btn-block">Cancel</a>
+      <div class="panel" id="customer-card-canvas">
+        <div class="row margin-bottom-10 error-happened hidden">
+          <div class="col-xs-12 col-sm-12 text-center">
+            <p class="padding-15">There is an error while we load our data. Please re-load your page</p>
+          </div>
+        </div>
+        <div class="row margin-bottom-10 loading-spinner hidden">
+          <div class="col-xs-12 col-sm-12 text-center">
+            <p class="margin-top-20">Loading data...</p>
+            <div class="loader-wrapper active margin-bottom-20">
+              <div class="loader-layer loader-teal-only">
+                <div class="loader-circle-left">
+                  <div class="circle"></div>
+                </div>
+                <div class="loader-circle-gap"></div>
+                <div class="loader-circle-right">
+                  <div class="circle"></div>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+        <div class="panel-heading">
+          <h3 class="panel-title">Customer name</h3>
+          <div class="panel-actions">
+            <a class="panel-action icon md-refresh-alt" data-toggle="panel-refresh" data-load-type="round-circle"
+               data-load-callback="customRefreshCallback" aria-hidden="true"></a>
+          </div>
+        </div>
+        <div class="panel-body">
           <div class="row">
-            <div class="col-sm-12 col-xs-12">
-              <p class="font-size-20 font-weight-300 text-capitalize margin-bottom-5 dms-signin-title"><i class="nailsdms-circle-hand"></i> Hand Services</p>
-
+            <div class="col-xs-12 col-sm-12 nail-tech-name">
+              <p class="request-nail-tech">Request: </p>
+              <p class="nail-tech-serve">Nails tech: </p>
+            </div>
+            <div class="col-sm-6 col-xs-6">
+              <button class="btn btn-primary btn-block work-start-bt" type="button">Start</button>
+            </div>
+            <div class="col-sm-6 col-xs-6">
+              <button class="btn btn-danger btn-block work-cancel-bt" type="button">Cancel</button>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-sm-12 col-xs-12 service-type-template">
+              <p class="font-size-20 font-weight-300 text-capitalize margin-bottom-5 margin-top-5 service-title-container"> <button class="btn btn-icon btn-pure red-500 icon md-minus-circle hidden"></button> <i class="nailsdms-circle-hand"></i> <span class="service-title"> Default Services </span> </p>
               <table class="table table-responsive table-bordered text-center">
-                <tr>
+                <tr class="row-template">
                   <td>
+                    <button type="button" class="btn btn-pure btn-danger icon md-close on-editing hidden"></button>
                     <div class="form-group form-material margin-bottom-0">
                       <div class="checkbox-custom checkbox-primary">
-                        <input type="checkbox" name="customer-hand-service[]" id="customer-hand-service-manicure" value="manicure" class="form-control" />
-                        <label for="customer-hand-service-manicure"></label>
+                        <input type="checkbox" value="" class="form-control" />
+                        <label ></label>
                       </div>
                     </div>
                   </td>
                   <td>
-                    <select class="form-control font-size-12" data-plugin="select2">
-                      <option value="manicure">Manicure</option>
-                      <option value="signature-manicure">Signature Manicure</option>
-                      <option value="Loveme Tender Manicure">Love Me Tender Manicure</option>
-                    </select>
+                    <div class="form-control">
 
-                  </td>
-                  <td>
-                      <div class="form-group form-material margin-bottom-0">
-                      <input type="text" name="service-price-manicure" value="15.00" maxlength="7" size="6" class="form-control" />
-                      </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="form-group form-material margin-bottom-0">
-                      <div class="checkbox-custom checkbox-primary">
-                        <input type="checkbox" name="customer-hand-service[]" value="gel-polish" class="form-control" id="customer-hand-service-gel-polish" />
-                        <label for="customer-hand-service-gel-polish"></label>
-                      </div>
-                    </div>
-                  </td>
-                  <td >
-                    <div class="form-control">
-                        Gel <br />
                     </div>
                   </td>
                   <td>
                     <div class="form-group form-material margin-bottom-0">
-                      <input type="text" name="service-price-gel-polish" value="25.00" maxlength="7" size="6" class="form-control" />
+                      <input type="text" value="0.00" maxlength="7" size="6" class="form-control" />
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <td>
-                    <div class="form-group form-material margin-bottom-0">
-                      <div class="checkbox-custom checkbox-primary">
-                        <input type="checkbox" name="customer-hand-service[]" value="french-tip" class="form-control" id="customer-hand-service-french-tip" />
-                        <label for="customer-hand-service-french-tip"></label>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="form-control">
-                      French Tip
-                    </div>
-                  </td>
-                  <td>
-                    <div class="form-group form-material margin-bottom-0">
-                      <input type="text" name="service-price-french-tip" value="5.00" maxlength="7" size="6" class="form-control" />
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="3"><a class="add-more-hand-services" href="#"> +Add more hand services</a> </td>
-                </tr>
-              </table>
-              <p class="font-size-20 font-weight-300 text-capitalize margin-bottom-5 dms-signin-title"><i class="nailsdms-circle-feet"></i> Feet Services</p>
-              <table class="table table-responsive table-bordered text-center">
-                <tr>
-                  <td>
-                    <div class="form-group form-material margin-bottom-0">
-                      <div class="checkbox-custom checkbox-primary">
-                        <input type="checkbox" name="customer-feet-service[]" value="pedicure" id="customer-feet-service-pedicure"/>
-                        <label for="customer-feet-service-pedicure"></label>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <select class="form-control font-size-12" data-plugin="select2">
-                      <option value="pedicure">Pedicure</option>
-                      <option value="signature-pedicure">Signature Pedicure</option>
-                      <option value="love-me-tender-pedicure">Love Me Tender Pedicure</option>
-                    </select>
-                  </td>
-                  <td>
-                    <div class="form-group form-material margin-bottom-0">
-                      <input type="text" name="service-price-pedicure" value="25.00" maxlength="7" size="6" class="form-control"/>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="form-group form-material margin-bottom-0">
-                      <div class="checkbox-custom checkbox-primary">
-                        <input type="checkbox" name="customer-feet-service[]" value="gel-polish" id="customer-feet-service-gel-polish" />
-                        <label for="customer-feet-service-gel-polish"></label>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="form-control">
-                      Gel
-                    </div>
-                  </td>
-                  <td>
-                    <div class="form-group form-material margin-bottom-0">
-                      <input type="text" name="service-price-feet-gel-polish" value="35.00" maxlength="7" size="6" class="form-control"/>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <div class="form-group form-material margin-bottom-0">
-                      <div class="checkbox-custom checkbox-primary">
-                        <input type="checkbox" name="customer-feet-service[]" value="french-tip" id="customer-feet-service-french-tip" />
-                        <label for="customer-feet-service-french-tip"></label>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="form-control">
-                      French Tip
-                    </div>
-                  </td>
-                  <td>
-                    <div class="form-group form-material margin-bottom-0">
-                      <input type="text" name="service-price-feet-french-tip" value="5.00" maxlength="7" size="6" class="form-control"/>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="3"><a class="add-more-feet-services" href="#"> +Add more feet services</a> </td>
+                  <td><a class="btn btn-sm btn-icon btn-pure btn-default active-delete-service" data-dms-service="default" href="#"><i class="icon md-delete" aria-hidden="true"></i> </a> </td>
+                  <td colspan="2"><a class="add-more-services" data-dms-add-more-services="default" href="#"> +Add more services</a> </td>
                 </tr>
               </table>
             </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 type-service-control margin-bottom-10">
+              <button class="add-more-type-service-bt btn btn-icon btn-default btn-block" type="button"><i class="icon md-plus-square"></i> Add more type service</button>
+              <button class="delete-type-service-bt btn btn-icon btn-default btn-block" type="button"><i class="icon md-minus-square"></i> Remove type service</button>
+            </div>
             <div class="clearfix"></div>
-
-            <div class="col-sm-7 col-xs-7">
+            <div class="col-sm-7 col-xs-7 total-text">
               <h3>Total</h3>
             </div>
-            <div class="col-sm-5 col-xs-5 text-center">
-              <span class="font-size-20"><i class="icon md-money"></i> 110.00</span>
+            <div class="col-sm-5 col-xs-5 text-center total-price">
+              <span class="font-size-20"><i class="icon md-money"></i> 0.00</span>
             </div>
-
             <div class="clearfix"></div>
             <div class="col-sm-12 col-xs-12 margin-bottom-10">
-              <button type="button" class="btn btn-warning btn-block">Done</button>
+              <button type="button" class="btn btn-warning btn-block work-done-bt">Done</button>
             </div>
             <div class="col-sm-12 col-xs-12">
-              <button type="button" class="btn btn-success btn-block">Pay</button>
+              <button type="button" class="btn btn-success btn-block work-pay-bt">Pay</button>
             </div>
           </div>
         </div>
@@ -709,7 +629,86 @@
   <script src="../../../global/js/components/slidepanel.js"></script>
   <script src="../../../global/js/components/switchery.js"></script>
   <script src="../../../global/js/components/tabs.js"></script>
+
+  <script src="../../assets/nailsdms/js/customer-card.js"></script>
+
   <script>
+
+    /**
+     * Add more row to current table
+     */
+    $('.add-more-services').on('click', function(e){
+      e.preventDefault();
+
+      var $current_table = $(this).closest('table');
+
+      var $new_row = $current_table.children('tbody').children('tr.row-template').clone(true, true);
+
+      $new_row.removeClass('hidden');
+      $new_row.removeClass('row-template');
+      $new_row.removeAttr('id').removeAttr('class');
+
+
+      var $first_col = $new_row.children('td').eq(0);
+
+      $first_col.find('input').attr('id', 'test-hand-add-service');
+      $first_col.find('label').attr('for', 'test-hand-add-service');
+      $first_col.find('button').attr('data-toggle','tool-tip');
+      $first_col.find('button').attr('data-original-title', 'Remove');
+      $first_col.find('button').addClass('delete-service');
+
+      var num_row = $current_table.children('tbody').children('tr').length;
+
+      //add new_row to current table
+      $current_table.children('tbody').children('tr').eq(num_row - 3).after($new_row);
+
+
+    });
+
+    /**
+     * Remove selected row
+     */
+    /*
+    $('button.delete-service').on('click', function(e){
+      console.log("mybutton");
+      $(this).closest('tr').remove();
+    });
+    */
+    $('#hand-service-table > tbody > tr').on('click', 'button.delete-service', function(e){
+      console.log("mybutton", $(this).closest('tr').remove());
+      $(this).closest('tr').remove();
+    });
+
+    /**
+     * Turn on and off delete service buttons
+     */
+    $('.active-delete-service').on('click', function(e){
+      e.preventDefault();
+
+      $current_table = $(this).closest('table');
+
+      if($(this).hasClass('btn-danger')){
+
+        $(this).removeClass('btn-danger');
+
+        $current_table.children('tbody').children('tr').each(function(){
+          $(this).children('td').eq(0).children('div').removeClass('hidden');
+          $(this).children('td').eq(0).children('button').addClass('hidden')
+        });
+      }
+      else {
+
+        $(this).addClass('btn-danger');
+        $current_table.children('tbody').children('tr').each(function(){
+          $(this).children('td').eq(0).children('button').removeClass('hidden');
+          $(this).children('td').eq(0).children('div').addClass('hidden')
+        });
+      }
+
+
+    });
+
+
   (function(document, window, $) {
     'use strict';
     var Site = window.Site;
