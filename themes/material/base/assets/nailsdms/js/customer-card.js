@@ -107,7 +107,7 @@ var CustomerCard = {
                         $_first_col.find('input').attr('value', _td.customer.work_tb[i].work_type.work_name );
                         $_first_col.find('label').attr('for','customer-select-hand-service-' + _td.customer.work_tb[i].id );
 
-                        
+                         
 
                         break;
                     case 'feet':
