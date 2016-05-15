@@ -177,12 +177,80 @@ var CustomerCard = {
      * @param object_service_array
      */
     drawServiceTables: function (object_service_array) {
+
+        var _self = this;
+
         // TODO:
         // for each object_service
         // create a new service-type-container by cloning a service-type-container-template
         // fill this new service-type-container  with data in object_service
         // append this service-type-container to service-type-container-master
+
+        for (var i = 0; i < object_service_array.length; i++) {
+
+            var $_new_services_container = _self.$myCanvas.find('.service-type-container-template').clone();
+
+            $_new_services_container.removeClass('service-type-container-template').addClass('service-type-container-' + object_service_array[i].name);
+            $_new_services_container.children('.service-title-container').find('i').removeClass('nailsdms-circle-hand').attr('class', 'nailsdms-circle-' + object_service_array[i].name);
+            $_new_services_container.children('.service-title-container').find('span.service-title').text(object_service_array[i].name + ' Services');
+
+            // loop through work_array and create a new row for each work
+            for (var ii = 0; ii < object_service_array[i].work_array.length; ii++){
+                var $_new_work_row = _self.$myCanvas.find('tr.row-template').clone();
+
+                $_new_work_row.removeClass('.row-template').addClass('service-' + object_service_array[i].work_array[ii].work_type.work_category + '-' + object_service_array[i].work_array[ii].work_type.work_name);
+
+                var $_new_work_row_first_col = $_new_work_row.children('td').eq(0);
+                var $_new_work_row_second_col = $_new_work_row.children('td').eq(1);
+                var $_new_work_row_third_col = $_new_work_row.children('td').eq(2);
+                //var $_new_work_row_fourth_col = $_new_work_row.children('td').eq(3);
+
+                $_new_work_row_first_col.find('input').attr('value', object_service_array[i].work_array[ii].work_type.work_name);
+                $_new_work_row_first_col.find('input').attr('name', 'service[' + object_service_array[i] + '][' + object_service_array[i].work_array[ii].work_type.work_name + ']');
+                $_new_work_row_first_col.find('input').attr('id', object_service_array[i].work_array[ii].work_type.work_name + '-' + object_service_array[i].work_array[ii].work_type.id);
+                $_new_work_row_first_col.find('label').attr('for', object_service_array[i].work_array[ii].work_type.work_name + '-' + object_service_array[i].work_array[ii].work_type.id);
+
+                $_new_work_row_second_col.find('select').addClass('service-select-' + object_service_array[i].work_array[ii].work_type.work_category + '-' + object_service_array[i].work_array[ii].work_type.work_name);
+                //todo:
+                //get menu for work_category to prepare for generating select option
+                var _work_category_menu_array = _self.getWorkCategoryMenu(_self.customer_data_and_menu.services_list, object_service_array[i].work_array[ii].work_type.work_category );
+                var $_my_select = $_new_work_row_second_col.find('select');
+                $.each(_work_category_menu_array, function(key, value){
+                   $_my_select.append($("<option></option>")
+                                            .attr("value", key)
+                                            .text(value));
+                });
+
+                console.log("My select ", $_my_select);
+            }
+
+
+
+        }
+
         return this;
+    },
+    /**
+     * look up in the big menu and return sub menu for work_category if not found return null
+     * @param menu array menu services [{name: <name of service>, <name>_services_list: [objects]},...]
+     * @param work_category string name of service we would like to get sub menu
+     * @return array [ {service_object_description_1, service_object_description_2,... }] | null
+     */
+    getWorkCategoryMenu: function (menu, work_category){
+
+        var _work_category_menu_array = {};
+
+        for (var i = 0; i < menu.length; i++){
+            if (menu[i].work_category == work_category){
+                for (var ii = 0; ii < menu[i].work_category_services_list.length; ii++){
+                    _work_category_menu_array[menu[i].work_category_services_list[ii].id] = menu[i].work_category_services_list[ii].work_name;
+                }
+
+                return _work_category_menu_array;
+            }
+        }
+
+        return null;
     },
 
 

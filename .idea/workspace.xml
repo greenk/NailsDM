@@ -59,11 +59,9 @@
       <file leaf-file-name="customer-card.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themes/material/base/assets/nailsdms/js/customer-card.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5830546">
-              <caret line="182" column="48" selection-start-line="182" selection-start-column="48" selection-end-line="182" selection-end-column="48" />
-              <folding>
-                <element signature="e#5091#7032#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.4882943">
+              <caret line="220" column="58" selection-start-line="220" selection-start-column="58" selection-end-line="220" selection-end-column="58" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -113,7 +111,7 @@
       <file leaf-file-name="customer_in_line.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/material/base/assets/nailsdms/js/customer_in_line.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="10" column="26" selection-start-line="2" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
               <folding />
             </state>
@@ -123,12 +121,12 @@
       <file leaf-file-name="customer-card.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themes/material/base/assets/data/customer-card.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-26.961538">
-              <caret line="247" column="21" selection-start-line="247" selection-start-column="21" selection-end-line="247" selection-end-column="21" />
+            <state vertical-scroll-proportion="-27.615385">
+              <caret line="248" column="0" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
               <folding>
-                <element signature="e#1900#4137#0" expanded="false" />
-                <element signature="e#4200#6446#0" expanded="false" />
-                <element signature="e#6513#6878#0" expanded="false" />
+                <element signature="e#1918#4155#0" expanded="false" />
+                <element signature="e#4236#6482#0" expanded="false" />
+                <element signature="e#6565#6930#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -175,8 +173,8 @@
         <option value="$PROJECT_DIR$/themes/material/base/assets/nailsdms/js/employee_status_datatable.js" />
         <option value="$PROJECT_DIR$/themes/material/base/html/pages/customer_signin.html" />
         <option value="$PROJECT_DIR$/themes/material/base/assets/nailsdms/css/nailsdms-style.css" />
-        <option value="$PROJECT_DIR$/themes/material/base/assets/data/customer-card.json" />
         <option value="$PROJECT_DIR$/themes/material/base/html/pages/customer_details.html" />
+        <option value="$PROJECT_DIR$/themes/material/base/assets/data/customer-card.json" />
         <option value="$PROJECT_DIR$/themes/material/base/assets/nailsdms/js/customer-card.js" />
       </list>
     </option>
@@ -1173,14 +1171,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/material/base/assets/nailsdms/js/customer_in_line.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="26" selection-start-line="2" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/material/base/assets/examples/js/tables/datatable.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1199,18 +1189,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/material/base/assets/data/customer-card.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.961538">
-          <caret line="247" column="21" selection-start-line="247" selection-start-column="21" selection-end-line="247" selection-end-column="21" />
-          <folding>
-            <element signature="e#1900#4137#0" expanded="false" />
-            <element signature="e#4200#6446#0" expanded="false" />
-            <element signature="e#6513#6878#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/material/base/html/pages/customer_details.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.6981134">
@@ -1225,13 +1203,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/themes/material/base/assets/nailsdms/js/customer_in_line.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="26" selection-start-line="2" selection-start-column="4" selection-end-line="38" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/material/base/assets/data/customer-card.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.615385">
+          <caret line="248" column="0" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
+          <folding>
+            <element signature="e#1918#4155#0" expanded="false" />
+            <element signature="e#4236#6482#0" expanded="false" />
+            <element signature="e#6565#6930#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/themes/material/base/assets/nailsdms/js/customer-card.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5830546">
-          <caret line="182" column="48" selection-start-line="182" selection-start-column="48" selection-end-line="182" selection-end-column="48" />
-          <folding>
-            <element signature="e#5091#7032#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.4882943">
+          <caret line="220" column="58" selection-start-line="220" selection-start-column="58" selection-end-line="220" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>

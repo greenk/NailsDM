@@ -67,8 +67,8 @@
   },
   "services_list":[
     {
-      "name": "hand",
-      "hand_services_list": [
+      "work_category": "hand",
+      "work_category_services_list": [
         {
           "id": "1",
           "work_name": "manicure",
@@ -156,8 +156,8 @@
       ]
     },
     {
-      "name": "feet",
-      "feet_services_list":[
+      "work_category": "feet",
+      "work_category_services_list":[
         {
           "id": "13",
           "work_name": "pedicure",
@@ -245,8 +245,8 @@
       ]
     },
     {
-      "name": "waxing",
-      "waxing_services_list":[
+      "work_category": "waxing",
+      "work_category_services_list":[
         {
           "id": "25",
           "work_name": "eyebrown",
