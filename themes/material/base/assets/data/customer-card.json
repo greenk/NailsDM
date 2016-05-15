@@ -67,7 +67,7 @@
   },
   "services_list":[
     {
-      "name": "hand services",
+      "name": "hand",
       "hand_services_list": [
         {
           "id": "1",
@@ -156,7 +156,7 @@
       ]
     },
     {
-      "name": "feet services",
+      "name": "feet",
       "feet_services_list":[
         {
           "id": "13",
@@ -245,7 +245,7 @@
       ]
     },
     {
-      "name": "waxing services",
+      "name": "waxing",
       "waxing_services_list":[
         {
           "id": "25",
